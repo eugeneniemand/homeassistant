@@ -1,0 +1,4 @@
+log/
+database.db
+.storage/
+state.json

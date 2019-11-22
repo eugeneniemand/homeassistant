@@ -1,0 +1,14 @@
+id: leave_home
+initial_state: true
+alias: Leave Home
+trigger:
+- entity_id: binary_sensor.niemands_home
+  platform: state
+  to: 'off'
+action:
+- service: alarm_control_panel.alarm_arm_away
+- service: script.notification_engine
+  data:
+    call_alarm_check: 1
+    call_door_check: 1
+    call_window_check: 1

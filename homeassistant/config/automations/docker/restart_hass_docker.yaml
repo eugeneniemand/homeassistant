@@ -1,0 +1,15 @@
+alias: Restart on Sonoff Failure
+trigger:
+  platform: event
+  event_type: system_log_event
+  event_data:
+    level: ERROR
+condition:
+  - condition: template
+    value_template: '{{ "sonoff.py" in trigger.event.data.source }}'  
+action:
+  - service: notify.iphones
+    data_template:
+      title: Sonoff Failed. Restarting...
+      message: '{{ trigger.event.data.message }}'
+  - service: script.restart_hass

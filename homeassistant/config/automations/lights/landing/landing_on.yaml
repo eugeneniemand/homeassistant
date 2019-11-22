@@ -1,0 +1,20 @@
+alias: Landing Turn Switch On
+initial_state: true
+trigger:
+- platform: mqtt
+  topic: zigbee2mqtt/bridge/log
+condition:
+  - condition: template
+    value_template: "{{ trigger.payload_json.type == 'zigbee_publish_error' }}"
+  - condition: template
+    value_template: "{{ trigger.payload_json.meta.entity.friendlyName == 'landing_light' }}"  
+action:
+- service: switch.turn_on
+  entity_id: switch.landing
+- service_template: >-
+    {% if trigger.payload_json.meta.message == '{"state": "ON"}' %}
+      light.turn_on
+    {% else %}
+      light.turn_off
+    {% endif %}
+  entity_id: light.landing

@@ -1,0 +1,9 @@
+alias: Sunrise Open Blinds
+initial_state: true
+trigger:
+- event: sunrise
+  platform: sun
+condition: []
+action:
+- service: cover.open_cover
+  entity_id: cover.lounge_blind

@@ -1,0 +1,10 @@
+alias: Sunset Floor Light
+initial_state: true
+trigger:
+- event: sunset
+  platform: sun
+  offset: "-01:00:00"
+condition: []
+action:
+- service: light.turn_on
+  entity_id: light.floor

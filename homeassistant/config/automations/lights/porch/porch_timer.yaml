@@ -1,0 +1,11 @@
+alias: Entrance Timer
+initial_state: true
+trigger:
+- platform: event
+  event_type: timer.finished
+  event_data:
+    entity_id:  timer.porch
+condition: []
+action:
+- service: light.turn_off
+  entity_id:  light.porch

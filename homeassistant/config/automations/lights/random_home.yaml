@@ -1,0 +1,22 @@
+id: random_home_lights
+alias: Random home lights
+initial_state: true
+trigger:
+- minutes: '/30'
+  platform: time_pattern
+condition:
+- condition: and
+  conditions:
+  - condition: state
+    entity_id: alarm_control_panel.yale_smart_alarm
+    state: armed_home
+  - condition: state
+    entity_id: input_boolean.is_night
+    state: 'on'
+  - before: 05:00:00
+    condition: time
+action:
+- delay: "00:00:{{ '{:02}'.format(range(1,10) | random | int) }}"
+- data_template:
+    entity_id: '{{ states.group.home_random_lights.attributes.entity_id | random }}'
+  service: homeassistant.toggle

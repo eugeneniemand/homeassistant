@@ -1,0 +1,11 @@
+alias: Notify of Restart
+initial_state: true
+trigger:
+- platform: homeassistant
+  event: start
+condition:
+action:
+- service: notify.iphones
+  data_template:
+    title: Restarted
+    message: 'Home assistant restarted'

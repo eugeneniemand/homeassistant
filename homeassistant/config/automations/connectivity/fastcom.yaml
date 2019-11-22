@@ -1,0 +1,9 @@
+alias: Fast.com check when no ping
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.ping_binary_sensor
+    from: 'on'
+    to: 'off'
+action:
+  - service: fastdotcom.speedtest

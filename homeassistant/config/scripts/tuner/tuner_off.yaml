@@ -1,0 +1,6 @@
+yamaha_tuner_off:
+  alias: Turn Off Radio
+  sequence:
+  - data:
+      entity_id: media_player.yamaha_receiver
+    service: media_player.turn_off

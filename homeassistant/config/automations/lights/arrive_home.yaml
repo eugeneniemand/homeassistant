@@ -1,0 +1,26 @@
+alias: AH Turn On Lights
+initial_state: true
+trigger:
+- entity_id: binary_sensor.eugene, binary_sensor.hailey
+  platform: state
+  to: 'on'
+condition:
+- condition: state
+  entity_id: binary_sensor.night
+  state: 'on'
+action:
+- service: light.turn_on
+  data:
+    entity_id:
+    - light.entrance
+    - light.porch
+- service: timer.cancel
+  data:
+    entity_id:
+    - timer.entrance
+    - timer.porch
+- service: timer.start
+  data:
+    entity_id:
+    - timer.entrance
+    - timer.porch

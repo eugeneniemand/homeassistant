@@ -1,0 +1,10 @@
+alias: Sunset Close Blinds
+initial_state: true
+trigger:
+- event: sunset
+  platform: sun
+  offset: "-00:45:00"
+condition: []
+action:
+- service: cover.close_cover
+  entity_id: cover.lounge_blind

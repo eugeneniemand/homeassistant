@@ -1,0 +1,72 @@
+alias: Master Motion Turn On Lights
+initial_state: true
+trigger:
+- platform: mqtt
+  topic: 'zigbee2mqtt/master_motion'
+condition:
+  condition: and 
+  conditions:
+  - condition: template
+    value_template: "{{ trigger.payload_json.occupancy == true }}"
+  - condition: or
+    conditions:     
+      - condition: template
+        value_template: "{{states('sensor.master_lux') | int <= states('input_number.master_lux_limit') | int}}"
+      - condition: state
+        entity_id: light.master_accent
+        state: 'on'
+action:
+- service: timer.cancel
+  data:
+    entity_id: timer.master_bedroom
+- service: timer.start
+  data_template:
+    entity_id: timer.master_bedroom
+    duration: >
+      {% set hour=states("sensor.time").split(':')[0] | int %}
+      {% if hour >= 5 and hour < 8 %}
+        00:02:00
+      {% elif hour >= 8 and hour <19 %}
+        00:05:00
+      {% elif hour >= 19 and hour <24 %}
+        00:01:00
+      {% else %}
+        00:00:30
+      {% endif %}
+- condition: state
+  entity_id: light.master_accent
+  state: 'off'
+- service: light.turn_on
+  data_template:
+    entity_id: light.master_accent
+    brightness_pct: >
+      {% set hour=states("sensor.time").split(':')[0] | int %}
+      {% if hour >= 5 and hour < 8 %}
+        30
+      {% elif hour >= 8 and hour <19 %}
+        100
+      {% elif hour >= 19 and hour <24 %}
+        10
+      {% else %}
+        1
+      {% endif %}
+    transition: 2
+- service: light.turn_on
+  data_template:
+    entity_id: light.master_accent    
+    rgb_color: [255,64,0]
+    transition: 2
+- condition: state
+  entity_id: input_boolean.kids_sleeping
+  state: 'off'
+- service: light.turn_on
+  data_template:
+    entity_id: light.master
+    brightness_pct: >
+      {% set hour=states("sensor.time").split(':')[0] | int %}
+      {% if hour >= 7 and hour < 19 %}
+        100
+      {% else %}
+        0
+      {% endif %}
+    transition: 2

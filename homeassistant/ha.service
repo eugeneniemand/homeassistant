@@ -1,0 +1,12 @@
+[Unit]
+Description=My HASS Services
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/home/pi/homeassistant/service start
+ExecStop=/home/pi/homeassistant/service stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

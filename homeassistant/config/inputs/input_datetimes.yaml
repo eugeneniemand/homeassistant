@@ -1,0 +1,8 @@
+travel_card_expiary_date:
+  name: Travel Card Expiary
+  has_date: true
+  has_time: false
+work_routine_time:
+  name: Work Routine
+  has_date: false
+  has_time: true

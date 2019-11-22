@@ -1,0 +1,89 @@
+version: '3.7'
+services:
+  mqtt:
+    image: pascaldevink/rpi-mosquitto
+    container_name: mqtt
+    tty: true
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt:arm32v6
+    container_name: zigbee2mqtt
+    volumes:
+      - /home/pi/ha/zigbee2mqtt:/app/data
+    devices:
+      - "/dev/ttyACM0"
+    depends_on:
+      - mqtt
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
+  home-assistant:
+    image: homeassistant/raspberrypi4-homeassistant:stable
+    container_name: home-assistant
+    init: true
+    network_mode: "host"
+    volumes:
+      - /home/pi/ha/homeassistant:/config 
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - mqtt
+      - zigbee2mqtt
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
+  ha-dockermon:
+    image: philhawthorne/ha-dockermon:arm
+    container_name: ha-dockermon
+    ports:
+      - "8126:8126"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /path/to/config:/config
+
+#  unifi:
+#    image: ryansch/unifi-rpi:latest
+#    container_name: unifi
+#    restart: always
+#    network_mode: host
+#    # Uncomment the following to set java options
+#    # environment:
+#    #   JAVA_OPTS: -Xmx512M
+#    volumes:
+#      # Unifi v5.0.7 creates all of these directories (some remain empty)
+#      - /home/pi/ha/unify/config:/var/lib/unifi
+#      - /home/pi/ha/unify/log:/usr/lib/unifi/logs
+#      - /home/pi/ha/unify/log2:/var/log/unifi
+#      - /home/pi/ha/unify/run:/usr/lib/unifi/run
+#      - /home/pi/ha/unify/run2:/run/unifi
+#      - /home/pi/ha/unify/work:/usr/lib/unifi/work
+#
+#  pihole:
+#    container_name: pihole
+#    image: pihole/pihole:4.3.2-1_armhf
+#    network_mode: host
+#    environment:
+#      INTERFACE: eth0 
+#      ServerIP: 192.168.1.3 
+#      TZ: 'Etc/UTC'
+#      WEBPASSWORD: 'admin'
+#    # Volumes store your data between container upgrades
+#    volumes:
+#      - '/home/pi/ha/pihole/etc-pihole/:/etc/pihole/'
+#      - '/home/pi/ha/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+#    dns:
+#      - 127.0.0.1
+#      - 1.1.1.1
+#    # Recommended but not required (DHCP needs NET_ADMIN)
+#    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+#    cap_add:
+#      - NET_ADMIN
+#    restart: unless-stopped

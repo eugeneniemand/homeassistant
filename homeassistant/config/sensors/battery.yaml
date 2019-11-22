@@ -1,0 +1,108 @@
+- platform: mqtt
+  name: Toilet Battery
+  state_topic: "zigbee2mqtt/toilet_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Lounge Battery
+  state_topic: "zigbee2mqtt/lounge_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Dining Battery
+  state_topic: "zigbee2mqtt/dining_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Kitchen Battery
+  state_topic: "zigbee2mqtt/kitchen_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Utility Battery
+  state_topic: "zigbee2mqtt/utility_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Landing Battery
+  state_topic: "zigbee2mqtt/landing_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Bathroom Battery
+  state_topic: "zigbee2mqtt/bathroom_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Master Battery
+  state_topic: "zigbee2mqtt/master_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: mqtt
+  name: Jayden Battery
+  state_topic: "zigbee2mqtt/jayden_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Front Door Battery
+  state_topic: "zigbee2mqtt/front_door"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Patio Door Battery
+  state_topic: "zigbee2mqtt/patio_door"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Back Door Battery
+  state_topic: "zigbee2mqtt/back_door"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Office Battery
+  state_topic: "zigbee2mqtt/office_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Aaron Battery
+  state_topic: "zigbee2mqtt/aaron_motion"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Lounge Left Window Battery
+  state_topic: "zigbee2mqtt/lounge_left_window"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Lounge RIght Window Battery
+  state_topic: "zigbee2mqtt/lounge_right_window"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Toilet Window Battery
+  state_topic: "zigbee2mqtt/toilet_window"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery
+- platform: "mqtt"
+  name: Kitchen Window Battery
+  state_topic: "zigbee2mqtt/kitchen_window"
+  value_template: "{{ value_json.battery }}"
+  unit_of_measurement: "%"
+  device_class: battery

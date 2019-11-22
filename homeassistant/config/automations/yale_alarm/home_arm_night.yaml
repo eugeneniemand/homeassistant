@@ -1,0 +1,30 @@
+id: yale_home
+initial_state: true
+alias: Yale Scheduled Arm
+trigger:
+  platform: time_pattern
+  minutes: /15
+condition: 
+- condition: and
+  conditions:
+  - condition: or
+    conditions:
+    - condition: time
+      after: '23:00:00'
+    - condition: time
+      before: '05:00:00'
+  # - condition: state
+  #   entity_id: binary_sensor.niemands_home
+  #   state: 'on'
+  - condition: state
+    entity_id: alarm_control_panel.yale_smart_alarm
+    state: disarmed
+action:
+- service: alarm_control_panel.alarm_arm_home
+  entity_id: alarm_control_panel.yale_smart_alarm
+- delay: '00:00:15'
+- service: script.speech_engine
+  data:
+    call_alarm_arm: 1
+    call_window_check: 1
+    call_door_check: 1

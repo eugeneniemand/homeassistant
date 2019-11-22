@@ -1,0 +1,17 @@
+turn_on_lounge_media:
+  alias: Turn on Lounge Media
+  sequence:  
+  - service: media_player.turn_on
+    entity_id: media_player.yamaha_receiver
+  - delay: 00:00:01
+  - service: switch.turn_on
+    entity_id: switch.lg_tv_power
+  - delay: 00:00:01
+  - service: media_player.select_source
+    entity_id: media_player.yamaha_receiver
+    data:
+      source: "HDMI2"
+  - delay: 00:00:01
+  - service: media_player.turn_on
+    entity_id: media_player.lounge_atv
+  - delay: 00:00:05

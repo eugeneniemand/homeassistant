@@ -1,0 +1,43 @@
+# downstairs lights
+toilet:
+  icon: mdi:toilet
+kitchen:
+  icon: mdi:stove
+lounge:
+  icon: mdi:sofa
+dining:
+  icon: mdi:silverware
+entrance:
+  icon: mdi:exit-run
+porch:
+  icon: mdi:walk
+fish:
+  icon: mdi:fish
+utility:
+  icon: mdi:washing-machine
+# upstairs lights
+landing:
+  icon: mdi:stairs
+bathroom:
+  icon: mdi:shower
+jayden_bedroom:
+  icon: mdi:bed-empty
+aaron:
+  icon: mdi:bed-empty
+master_bedroom:
+  icon: mdi:bed-empty
+office:
+  icon: mdi:book-open-page-variant
+# doors and windows
+front_door:
+  icon: mdi:door
+back_door:
+  icon: mdi:door
+patio_door:
+  icon: mdi:door
+toilet_window:
+  icon: mdi:window-open
+lounge_windows:
+  icon: mdi:window-open
+kitchen_window:
+  icon: mdi:window-open

@@ -1,0 +1,4 @@
+- platform: tod
+  name: Early Morning
+  after: sunrise
+  before: '08:00'

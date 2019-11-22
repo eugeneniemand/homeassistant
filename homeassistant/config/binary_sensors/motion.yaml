@@ -1,0 +1,55 @@
+- platform: mqtt
+  name: Toilet Motion
+  state_topic: "zigbee2mqtt/toilet_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Lounge Motion
+  state_topic: "zigbee2mqtt/lounge_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Dining Motion
+  state_topic: "zigbee2mqtt/dining_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Kitchen Motion
+  state_topic: "zigbee2mqtt/kitchen_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Utility Motion
+  state_topic: "zigbee2mqtt/utility_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Landing Motion
+  state_topic: "zigbee2mqtt/landing_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Bathroom Motion
+  state_topic: "zigbee2mqtt/bathroom_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Master Motion
+  state_topic: "zigbee2mqtt/master_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Jayden Motion
+  state_topic: "zigbee2mqtt/jayden_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Aaron Motion
+  state_topic: "zigbee2mqtt/aaron_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion
+- platform: mqtt
+  name: Office Motion
+  state_topic: "zigbee2mqtt/office_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion

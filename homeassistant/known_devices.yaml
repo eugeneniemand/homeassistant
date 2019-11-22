@@ -1,0 +1,32 @@
+
+eugene:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Eugene
+  picture:
+  track: true
+
+hailey:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Hailey
+  picture:
+  track: true
+
+hailey_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: hailey ping
+  picture:
+  track: true
+
+eugene_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: eugene ping
+  picture:
+  track: true

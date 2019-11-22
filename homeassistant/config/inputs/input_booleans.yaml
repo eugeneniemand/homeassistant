@@ -1,0 +1,19 @@
+work_tomorrow:
+  name: Work Tomorrow
+  initial: on
+  icon: mdi:office-building
+
+is_night:
+  name: Is Night
+  initial: off
+  icon: mdi:weather-night
+
+is_bedtime:
+  name: Is Bedtime
+  initial: off
+  icon: mdi:bed-empty
+
+kids_sleeping:
+  name: Kids Sleeping
+  initial: off
+  icon: mdi:sleep

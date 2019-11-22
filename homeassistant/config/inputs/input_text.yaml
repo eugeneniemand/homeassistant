@@ -1,0 +1,6 @@
+eugene_location:
+  initial: "unknown"
+hailey_location:
+  initial: "unknown"
+notification_message:
+  initial: "NotSet"

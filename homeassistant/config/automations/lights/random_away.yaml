@@ -1,0 +1,21 @@
+id: random_away_lights
+initial_state: true
+alias: Random away lights
+trigger:
+- minutes: /15
+  platform: time_pattern
+condition:
+  condition: and
+  conditions:
+  - condition: state
+    entity_id: alarm_control_panel.yale_smart_alarm
+    state: armed_away
+  - condition: state
+    entity_id: binary_sensor.night
+    state: 'on'
+action:
+- delay: 00:{{ '{:02}'.format(range(1,10) | random | int) }}:00
+- service: homeassistant.toggle
+  data_template:
+    entity_id: '{{ states.group.away_random_lights.attributes.entity_id | random }}'
+  

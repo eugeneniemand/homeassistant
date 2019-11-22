@@ -1,0 +1,17 @@
+- platform: mqtt
+  name: Lounge Blind
+  command_topic: "shellies/shellyswitch25-E5A1D2/roller/0/command"
+  position_topic: "shellies/shellyswitch25-E5A1D2/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch25-E5A1D2/roller/0/command/pos"
+  availability_topic: "shellies/shellyswitch25-E5A1D2/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  retain: false
+  optimistic: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  qos: 0
+  value_template: '{{ value.x }}'

@@ -1,0 +1,11 @@
+id: shellies_announce
+initial_state: true
+alias: Shellies Announce
+trigger:
+- platform: homeassistant
+  event: start
+action:
+- service: mqtt.publish
+  data:
+    topic: shellies/command
+    payload: announce

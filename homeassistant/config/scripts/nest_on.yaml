@@ -1,0 +1,8 @@
+nest_on:
+  alias: Nest On
+  sequence:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.lounge
+      media_content_id: neston
+      media_content_type: routine

@@ -1,0 +1,63 @@
+tts_all:
+  alias: TTS On All Echos
+  sequence:
+  - condition: template
+    value_template: "{{ message|trim|length > 0 }}"
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.kitchen_media_player_volume
+      value: >
+        {% if is_state('media_player.kitchen', 'playing') %} 
+          {{ states.media_player.kitchen.attributes.volume_level }}
+        {% else %}
+          {{ states.input_number.kitchen_media_player_volume.attributes.initial }}
+        {% endif %}
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.master_media_player_volume
+      value: >
+        {% if is_state('media_player.kitchen', 'playing') %} 
+          {{ states.media_player.master.attributes.volume_level }}
+        {% else %}
+          {{ states.input_number.master_media_player_volume.attributes.initial }}
+        {% endif %}
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.kitchen
+      volume_level:  >
+        {% set hour=states("sensor.time").split(':')[0] | int %}
+        {% if hour >= 8 and hour <19 %}
+          {{ states.input_number.kitchen_tts_day_volume.state }}
+        {% else %}
+          {{ states.input_number.kitchen_tts_night_volume.state }}
+        {% endif %}
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.master
+      volume_level:  >
+        {% set hour=states("sensor.time").split(':')[0] | int %}
+        {% if hour >= 8 and hour <19 %}
+          {{ states.input_number.master_tts_day_volume.state }}
+        {% else %}
+          {{ states.input_number.master_tts_night_volume.state }}
+        {% endif %}
+  - delay: '00:00:01'
+  - service: notify.alexa_media
+    data_template:
+      target: 
+        - media_player.kitchen
+        - media_player.master
+        - media_player.jayden
+        - media_player.lounge
+      data:
+          type: announce
+      message: "{{ message }}"
+  - delay: '00:00:05'
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.kitchen
+      volume_level: "{{ states.input_number.kitchen_media_player_volume.state }}"
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.master
+      volume_level: "{{ states.input_number.master_media_player_volume.state }}"

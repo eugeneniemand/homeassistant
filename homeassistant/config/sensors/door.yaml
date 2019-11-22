@@ -1,0 +1,29 @@
+# Contact
+- platform: "mqtt"
+  name: Front Door Contact
+  state_topic: "zigbee2mqtt/front_door"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Patio Door Contact
+  state_topic: "zigbee2mqtt/patio_door"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Back Door Contact
+  state_topic: "zigbee2mqtt/back_door"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Toilet Window
+  state_topic: "zigbee2mqtt/toilet_window"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Lounge Left Window
+  state_topic: "zigbee2mqtt/lounge_left_window"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Lounge Right Window
+  state_topic: "zigbee2mqtt/lounge_right_window"
+  value_template: "{{ value_json.contact }}"
+- platform: "mqtt"
+  name: Kitchen Window
+  state_topic: "zigbee2mqtt/kitchen_window"
+  value_template: "{{ value_json.contact }}"

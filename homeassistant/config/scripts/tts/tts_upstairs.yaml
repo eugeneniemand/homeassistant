@@ -1,0 +1,23 @@
+tts_upstairs:
+  alias: TTS On Upstairs Echo
+  sequence:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.upstairs
+      volume_level: >
+        {% set hour=states("sensor.time").split(':')[0] | int %}
+        {% if volume is defined %}
+          {{ volume }}
+        {% elif hour >= 8 and hour <20 %}
+          {{ states.input_number.upstairs_tts_day_volume.state }}
+        {% else %}
+          {{ states.input_number.upstairs_tts_night_volume.state }}
+        {% endif %}
+  - delay: '00:00:01'
+  - service: notify.alexa_media
+    data_template:
+      target: 
+        - media_player.upstairs
+      data:
+          type: announce
+      message: "{{ message }}"

@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: Floor Sonoff
+  state_topic: "stat/floor_light/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/floor_light/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false

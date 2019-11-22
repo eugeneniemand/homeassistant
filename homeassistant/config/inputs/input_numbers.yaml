@@ -1,0 +1,155 @@
+kitchen_media_player_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.3
+
+master_media_player_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.3
+
+kitchen_tts_day_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.6
+
+kitchen_tts_night_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.3
+
+master_tts_day_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.4
+  
+master_tts_night_volume:
+  min: 0
+  max: 1
+  step: 0.1
+  initial: 0.2
+
+toilet_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+lounge_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+dining_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+kitchen_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+utility_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+landing_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+bathroom_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+master_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+jayden_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+aaron_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+office_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
+toilet_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+lounge_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+dining_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+kitchen_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+utility_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+landing_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+bathroom_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+master_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+jayden_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+entrance_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+porch_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+aaron_timeout:
+  min: 0
+  max: 59
+  step: 1
+
+office_timeout:
+  min: 0
+  max: 59
+  step: 1

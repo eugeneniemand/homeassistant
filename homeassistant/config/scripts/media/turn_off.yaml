@@ -1,0 +1,13 @@
+turn_off_lounge_media:
+  alias: Turn off Lounge Media
+  sequence:
+  - service: switch.turn_off
+    entity_id: switch.apple_tv_home
+  - service: switch.turn_off
+    entity_id: switch.apple_tv_menu
+  - service: switch.turn_off
+    entity_id: switch.lg_tv_power
+  - service: media_player.turn_off
+    entity_id: media_player.lounge_atv
+  - service: media_player.turn_off
+    entity_id: media_player.yamaha_receiver

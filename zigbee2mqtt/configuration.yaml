@@ -1,0 +1,143 @@
+homeassistant: false
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://192.168.1.3'
+serial:
+  port: /dev/ttyACM0
+groups:
+  '1':
+    friendly_name: dining_group
+    devices:
+      - '0x000d6ffffe4b2431'
+      - '0x000d6ffffe4c0abb'
+      - '0x000d6ffffe4c2e50'
+      - '0x000d6ffffe62eaf8'
+  '2':
+    friendly_name: bathroom_group
+    devices:
+      - '0x000d6ffffe4b2b06'
+      - '0x000d6ffffe4b5c14'
+      - '0x000d6ffffe62f426'
+      - '0x000d6ffffe5d5a23'
+advanced:
+  channel: 15
+  log_level: info
+devices:
+  '0x00158d000313ce7d':
+    friendly_name: lounge_motion
+    retain: false
+  '0x00158d0003667934':
+    friendly_name: dining_motion
+    retain: false
+  '0x00158d0002f3c254':
+    friendly_name: kitchen_motion
+    retain: false
+  '0x00158d0002f2a6c0':
+    friendly_name: landing_motion
+    retain: false
+  '0x00158d0002f2a797':
+    friendly_name: bathroom_motion
+    retain: false
+  '0x00158d00031b1d59':
+    friendly_name: master_motion
+    retain: false
+  '0x00158d00036679b4':
+    friendly_name: utility_motion
+    retain: false
+  '0x00158d0003121456':
+    friendly_name: front_door
+    retain: false
+  '0x00158d0002ecf038':
+    friendly_name: patio_door
+    retain: false
+  '0x00158d0003120b9e':
+    friendly_name: back_door
+    retain: false
+  '0x00158d0002a21b2e':
+    friendly_name: fish_vibration
+    retain: false
+  '0x00158d0002a21b3b':
+    friendly_name: post_vibration
+    retain: false
+  '0x000d6ffffe4b2431':
+    friendly_name: dining1_light
+    retain: false
+  '0x000d6ffffe62eaf8':
+    friendly_name: dining2_light
+    retain: false
+  '0x000d6ffffe4c0abb':
+    friendly_name: dining3_light
+    retain: false
+  '0x000d6ffffe4c2e50':
+    friendly_name: dining4_light
+    retain: false
+  '0x000b3cfffef29ff9':
+    friendly_name: landing_light
+    retain: false
+  '0x000b3cfffef196f6':
+    friendly_name: toilet_light
+    retain: false
+  '0x000d6ffffefc1999':
+    friendly_name: porch_light
+    retain: false
+  '0x000b3cfffef3b1b4':
+    friendly_name: utility_light
+    retain: false
+  '0x000d6ffffe016c9f':
+    friendly_name: floor_light
+    retain: false
+  '0x000d6ffffe1377b8':
+    friendly_name: aaron_light
+    retain: false
+  '0x000d6ffffe5d5a23':
+    friendly_name: bathroom1_light
+    retain: false
+  '0x000d6ffffe4b5c14':
+    friendly_name: bathroom2_light
+    retain: false
+  '0x000d6ffffe4b2b06':
+    friendly_name: bathroom3_light
+    retain: false
+  '0x000d6ffffe62f426':
+    friendly_name: bathroom4_light
+    retain: false
+  '0x000d6ffffe03bcad':
+    friendly_name: jayden_light
+    retain: false
+  '0x000d6ffffe12ba7a':
+    friendly_name: office_light
+    retain: false
+  '0x000d6ffffe03a9c8':
+    friendly_name: master_light
+    retain: false
+  '0x000d6ffffebcc820':
+    friendly_name: fish_light
+    retain: false
+  '0x00158d0002f2a23c':
+    friendly_name: jayden_motion
+    retain: false
+  '0x00158d00033a9083':
+    friendly_name: lounge_right_window
+    retain: false
+  '0x00158d00031383ac':
+    friendly_name: kitchen_window
+    retain: false
+  '0x00158d00033a918c':
+    friendly_name: lounge_left_window
+    retain: false
+  '0x00158d000257f75c':
+    friendly_name: dodgy_toilet
+    retain: false
+  '0x00158d0004143bf3':
+    friendly_name: office_motion
+    retain: false
+  '0x00158d0004141aea':
+    friendly_name: aaron_motion
+    retain: false
+  '0x00158d0003f42341':
+    friendly_name: toilet_motion
+    retain: false
+  '0x00158d00033ab698':
+    friendly_name: toilet_window
+    retain: false

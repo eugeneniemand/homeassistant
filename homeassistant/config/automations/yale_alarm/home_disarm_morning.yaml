@@ -1,0 +1,16 @@
+id: yale_disarm
+initial_state: true
+alias: Yale Scheduled Disarm
+trigger:
+- at: 05:30:00
+  platform: time
+condition:
+# - condition: state
+#   entity_id: binary_sensor.niemands_home
+#   state: 'on'
+action:
+- service: alarm_control_panel.alarm_disarm
+  entity_id: alarm_control_panel.yale_smart_alarm
+- service: script.speech_engine
+  data:
+    call_alarm_disarm: 1

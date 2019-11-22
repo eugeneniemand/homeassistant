@@ -1,0 +1,366 @@
+title: My Awesome Home
+views:
+  - title: Lights
+    icon: mdi:lightbulb-on-outline
+    cards:     
+      - title: Downstairs
+        type: glance
+        show_state: false
+        columns: 4
+        entities:
+          - entity: light.porch
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.entrance
+            tap_action: 
+              action: toggle
+          - entity: light.toilet
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.floor
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.lounge
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.dining
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.kitchen
+            tap_action: 
+              action: toggle
+          - entity: light.utility
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: switch.fish
+            tap_action: 
+              action: toggle
+      - title: Upstairs
+        type: glance
+        show_state: false
+        columns: 4
+        entities:
+          - entity: light.landing
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.bathroom
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity:  light.master
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity:  light.master_accent
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.jayden
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.aaron
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.office
+            tap_action: 
+              action: toggle
+            hold_action:
+              action: more-info
+          - entity: light.jayden_bedside
+            tap_action: 
+              action: toggle
+
+  - title: Security
+    icon: mdi:lock
+    cards:
+      - type: glance
+        title: People
+        entities:
+          - binary_sensor.eugene
+          - binary_sensor.hailey
+          - binary_sensor.niemands_home
+      - name: House Alarm
+        type: alarm-panel
+        entity: alarm_control_panel.yale_smart_alarm
+        states:
+          - arm_home
+          - arm_away
+      - title: Doors
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: sensor.front_door_contact
+            secondary_info: last-changed
+          - entity: sensor.back_door_contact
+            secondary_info: last-changed
+          - entity: sensor.patio_door_contact
+            secondary_info: last-changed
+      - title: Windows
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: cover.lounge_blind
+            secondary_info: last-changed
+          - entity: sensor.lounge_left_window
+            secondary_info: last-changed
+          - entity: sensor.lounge_right_window
+            secondary_info: last-changed
+          - entity: sensor.toilet_window
+            secondary_info: last-changed
+          - entity: sensor.kitchen_window
+            secondary_info: last-changed
+      - title: Downstairs Motion
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.toilet_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.kitchen_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.lounge_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.dining_motion
+            secondary_info: last-changed
+      - title: Upstairs Motion
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.bathroom_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.landing_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.jayden_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.master_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.office_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.aaron_motion
+            secondary_info: last-changed
+      - title: Outside Motion
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.ring_garage_motion
+            secondary_info: last-changed
+          - entity: binary_sensor.ring_front_door_motion
+            secondary_info: last-changed
+  - title: Cameras
+    icon: mdi:camera
+    cards:
+      - type: picture-glance
+        title: Road
+        camera_image: camera.foscam_camera
+        entities: []
+      - type: picture-glance
+        title: Front Door
+        camera_image: camera.front_door
+        entities: []
+      - type: picture-glance
+        title: Garage
+        camera_image: camera.garage
+        entities: []
+      - type: picture-glance
+        title: Mom Front Door
+        camera_image: camera.front_door_2
+        entities: []
+
+  - title: Climate
+    icon: mdi:thermometer
+    cards:
+      - type: thermostat
+        entity: climate.melcloud_lounge_174962
+        name: Lounge
+      - type: thermostat
+        entity: climate.melcloud_master_176430
+        name: Master
+      - type: thermostat
+        entity: climate.melcloud_jayden_177589
+        name: Jayden
+      - type: thermostat
+        entity: climate.melcloud_aaron_177590
+        name: Aaron
+      - type: gauge
+        name: Outside
+        entity: sensor.met_office_temperature
+        min: -10
+        max: 35
+      - type: gauge
+        name: Feels Like
+        entity: sensor.met_office_feels_like_temperature
+        min: -10
+        max: 35
+      - type: history-graph
+        title: Tempratures
+        entities:
+          - sensor.met_office_temperature
+          - sensor.met_office_feels_like_temperature
+          - sensor.avg_current_temperature
+  - title: Timers
+    icon: mdi:progress-clock
+    cards:
+      - type: entities
+        entities: 
+          # downstairs
+          - timer.toilet
+          - timer.kitchen
+          - timer.lounge
+          - timer.dining
+          - timer.entrance
+          - timer.porch
+          - timer.utility
+          - timer.fish
+          #upstairs
+          - timer.landing
+          - timer.bathroom
+          - timer.jayden_bedroom
+          - timer.aaron
+          - timer.master_bedroom
+          - timer.office
+      - type: entities
+        entities: 
+          # downstairs
+          - input_number.toilet_timeout
+          - input_number.kitchen_timeout
+          - input_number.lounge_timeout
+          - input_number.dining_timeout
+          - input_number.entrance_timeout
+          - input_number.porch_timeout
+          - input_number.utility_timeout
+          #upstairs
+          - input_number.landing_timeout
+          - input_number.bathroom_timeout
+          - input_number.jayden_timeout
+          - input_number.aaron_timeout
+          - input_number.master_timeout
+          - input_number.office_timeout
+  - title: Weather
+    icon: mdi:weather-partlycloudy
+    cards:
+    - type: weather-forecast
+      entity: weather.dark_sky
+  - title: Lux
+    icon: mdi:alarm-light-outline
+    panel: true
+    cards:
+    - type: vertical-stack
+      cards:
+      - type: history-graph
+        hours_to_show: 48
+        title: Downstairs Lux
+        entities:
+        - entity: sensor.toilet_lux
+          name: Toilet
+        - entity: sensor.kitchen_lux
+          name: Kitchen
+        - entity: sensor.lounge_lux
+          name: Lounge
+        - entity: sensor.dining_lux
+          name: Dining
+        - entity: sensor.utility_lux
+          name: Utility
+      - type: history-graph
+        hours_to_show: 48
+        title: Upstairs Lux
+        entities:
+        - entity: sensor.landing_lux
+          name: Landing
+        - entity: sensor.bathroom_lux
+          name: Bathroom
+        - entity: sensor.master_lux
+          name: Master
+        - entity: sensor.jayden_lux
+          name: Jayden
+        - entity: sensor.office_lux
+          name: office
+        - entity: sensor.aaron_lux
+          name: Aaron
+      - type: history-graph
+        title: Internet
+        entities:
+        - entity: binary_sensor.ping_binary_sensor
+          name: Google Ping
+        - entity: sensor.fast_com_download
+          name: Fast.com
+        - entity: sensor.speedtest_download
+          name: Speed Test Download
+        - entity: sensor.speedtest_ping
+          name: Speedtest Ping
+        - entity: sensor.speedtest_upload
+          name: Speedtest Upload
+  - title: Settings
+    icon: mdi:settings
+    cards:
+      - title: Volumes
+        type: entities
+        show_header_toggle: false
+        entities:
+          - input_number.kitchen_media_player_volume
+          - input_number.master_media_player_volume
+          - input_number.kitchen_tts_day_volume
+          - input_number.kitchen_tts_night_volume
+          - input_number.master_tts_day_volume
+          - input_number.master_tts_night_volume
+      - title: Downstairs Lux Limits
+        type: entities
+        show_header_toggle: false
+        entities:
+        - entity: input_number.toilet_lux_limit
+        - entity: sensor.toilet_lux
+        - entity: input_number.kitchen_lux_limit
+        - entity: sensor.kitchen_lux
+        - entity: input_number.lounge_lux_limit
+        - entity: sensor.lounge_lux
+        - entity: input_number.dining_lux_limit
+        - entity: sensor.dining_lux
+        - entity: input_number.utility_lux_limit
+        - entity: sensor.utility_lux
+      - title: Upstairs Lux Limits
+        type: entities
+        show_header_toggle: false
+        entities:
+        - entity: input_number.landing_lux_limit
+        - entity: sensor.landing_lux
+        - entity: input_number.bathroom_lux_limit
+        - entity: sensor.bathroom_lux
+        - entity: input_number.master_lux_limit
+        - entity: sensor.master_lux
+        - entity: input_number.jayden_lux_limit
+        - entity: sensor.jayden_lux
+        - entity: input_number.aaron_lux_limit
+        - entity: sensor.aaron_lux
+        - entity: input_number.office_lux_limit
+        - entity: sensor.office_lux
+      - title: Settings
+        type: glance
+        entities:
+          - entity: input_boolean.work_tomorrow
+            tap_action: 
+              action: toggle
+          - input_datetime.work_routine_time
+          - entity: script.restart_hass
+            icon: mdi:refresh
+            name: Restart HASS
+            tap_action: 
+              action: toggle

@@ -1,0 +1,11 @@
+alias: Fish Timer
+initial_state: true
+trigger:
+- platform: event
+  event_type: timer.finished
+  event_data:
+    entity_id: timer.fish
+condition: []
+action:
+- service: switch.turn_off
+  entity_id: switch.fish

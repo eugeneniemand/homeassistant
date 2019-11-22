@@ -1,0 +1,79 @@
+tradfri_pair:
+  alias: Tradfri Pairing
+  sequence:
+  # go 1
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'
+  # - delay: 
+  #     milliseconds: 20
+  # go 2
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'
+  # - delay: 
+  #     milliseconds: 20
+  # go 3
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'
+  # - delay: 
+  #     milliseconds: 20
+  # go 4
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'
+  # - delay: 
+  #     milliseconds: 20
+  # go 5
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'
+  # - delay: 
+  #     milliseconds: 20
+  # go 6
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'off'
+  - delay: 
+      milliseconds: 30
+  - service: mqtt.publish
+    data_template:
+      topic: shellies/shelly1-2C7EE1/relay/0/command
+      payload: 'on'

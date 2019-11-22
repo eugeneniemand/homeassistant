@@ -1,0 +1,22 @@
+alias: Lounge Low Temperature
+trigger:
+  platform: time_pattern
+  minutes: /5
+condition:
+  - condition: state
+    entity_id: climate.melcloud_lounge_174962
+    state: 'off'
+  - condition: template
+    value_template: "{{ state_attr('climate.melcloud_lounge_174962', 'current_temperature') | float < (state_attr('climate.melcloud_lounge_174962', 'temperature') | float - 3) }}"
+action:
+  - service: climate.turn_on
+    entity_id: climate.melcloud_lounge_174962
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.melcloud_lounge_174962
+      fan_mode: Speed Auto
+  - service: climate.set_hvac_mode
+    data:
+      entity_id: climate.melcloud_lounge_174962
+      fan_mode: Heat
+  

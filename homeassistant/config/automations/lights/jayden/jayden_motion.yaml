@@ -1,0 +1,58 @@
+alias: Jayden Motion Turn On Lights
+initial_state: true
+trigger:
+- platform: mqtt
+  topic: 'zigbee2mqtt/jayden_motion'
+condition:
+  condition: and 
+  conditions:
+  - condition: template
+    value_template: "{{ trigger.payload_json.occupancy == true }}"
+  - condition: or
+    conditions:     
+      - condition: template
+        value_template: "{{states('sensor.jayden_lux') | int <= states('input_number.jayden_lux_limit') | int}}"
+      - condition: state
+        entity_id: light.jayden
+        state: 'on'
+action:
+- service: timer.cancel
+  data:
+    entity_id: timer.jayden_bedroom
+- service: timer.start
+  data_template:
+    entity_id: timer.jayden_bedroom
+    duration: 00:{{ '{:02}'.format(states('input_number.jayden_timeout') | int) }}:00
+- condition: state
+  entity_id: light.jayden
+  state: 'off'
+- service: switch.turn_on
+  entity_id: switch.jayden
+- service: light.turn_on
+  data_template:
+    entity_id: light.jayden
+    brightness_pct: >
+      {% set hour=states("sensor.time").split(':')[0] | int %}
+      {% if hour >= 5 and hour < 8 %}
+        30
+      {% elif hour >= 8 and hour <21 %}
+        100
+      {% elif hour >= 21 and hour <24 %}
+        10
+      {% else %}
+        1
+      {% endif %}
+- service: light.turn_on
+  data_template:
+    entity_id: light.jayden
+    color_temp: > #153 - 500 326 mid
+      {% set hour=states("sensor.time").split(':')[0] | int %}
+      {% if hour >= 5 and hour < 15 %}
+        153
+      {% elif hour >= 15 and hour < 18 %}
+        326      
+      {% else %}
+        500
+      {% endif %}
+    transition: 1
+    

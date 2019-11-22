@@ -1,0 +1,33 @@
+- platform: mqtt
+  name: Sprinkler Right Power
+  state_topic: "shellies/shellyswitch25-BA86C3/relay/0/power"
+  unit_of_measurement: "Watts"
+- platform: mqtt
+  name: Sprinkler Left Power
+  state_topic: "shellies/shellyswitch25-BA86C3/relay/1/power"
+  unit_of_measurement: "Watts"
+- platform: mqtt
+  name: Sprinkler Right Energy
+  state_topic: "shellies/shellyswitch25-BA86C3/relay/0/energy"
+  unit_of_measurement: "Watt-min"
+- platform: mqtt
+  name: Sprinkler Left Energy
+  state_topic: "shellies/shellyswitch25-BA86C3/relay/1/energy"
+  unit_of_measurement: "Watt-min"
+
+- platform: mqtt
+  name: Dishwasher Power
+  state_topic: "shellies/shellyswitch25-BA7719/relay/0/power"
+  unit_of_measurement: "Watts"
+- platform: mqtt
+  name: Dryer Power
+  state_topic: "shellies/shellyswitch25-BA7719/relay/1/power"
+  unit_of_measurement: "Watts"
+- platform: mqtt
+  name: Dishwasher Energy
+  state_topic: "shellies/shellyswitch25-BA7719/relay/0/energy"
+  unit_of_measurement: "Watt-min"
+- platform: mqtt
+  name: Dryer Energy
+  state_topic: "shellies/shellyswitch25-BA7719/relay/1/energy"
+  unit_of_measurement: "Watt-min"

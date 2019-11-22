@@ -1,0 +1,7 @@
+tradfri_pair_exec:
+  alias: Tradfri Pairing Executor
+  sequence:
+  # go 1
+  - service: script.tradfri_pair
+    data:
+      entityid: switch.landing

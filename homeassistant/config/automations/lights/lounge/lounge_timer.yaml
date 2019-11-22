@@ -1,0 +1,16 @@
+alias: Lounge Timer
+initial_state: true
+trigger:
+- platform: event
+  event_type: timer.finished
+  event_data:
+    entity_id: timer.lounge
+condition:
+- condition: state
+  entity_id: media_player.yamaha_receiver
+  state: 'off'
+action:
+- service: light.turn_off
+  data:
+    transition: 3
+    entity_id: light.floor

@@ -1,0 +1,21 @@
+alias: Arrive Home
+initial_state: true
+trigger:
+- entity_id: binary_sensor.niemands_home
+  platform: state
+  to: 'on'
+action:
+- service: alarm_control_panel.alarm_disarm
+  entity_id: alarm_control_panel.yale_smart_alarm
+- service: script.notification_engine
+  data:
+    call_welcome_home: 1
+    call_alarm_check: 1
+    call_door_check: 1
+    call_window_check: 1
+- delay: 00:01:00
+- service: script.speech_engine
+  data:
+    call_welcome_home: 1
+    call_alarm_check: 1
+    call_inside_weather: 1
