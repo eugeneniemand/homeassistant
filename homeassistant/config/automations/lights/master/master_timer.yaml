@@ -9,8 +9,5 @@ condition: []
 action:
 - service: light.turn_off
   entity_id: light.master_accent
-- condition: state
-  entity_id: input_boolean.kids_sleeping
-  state: 'on'
 - service: light.turn_off
   entity_id: light.master

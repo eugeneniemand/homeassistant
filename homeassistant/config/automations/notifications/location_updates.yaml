@@ -22,6 +22,6 @@ action:
 - service: script.tts_all
   data_template:
     message: "{{ trigger.to_state.attributes.friendly_name }}'s location is: {{ trigger.to_state.state }}"
-- service: notify.iphones
+- service_template: notify.{% if trigger.entity_id == 'device_tracker.eugene' %}ios_hailey{% else %}ios_eugene{% endif %}
   data_template:
     message: "{{ trigger.to_state.attributes.friendly_name }}'s location is: {{ trigger.to_state.state }}"

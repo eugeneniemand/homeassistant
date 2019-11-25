@@ -6,9 +6,13 @@ trigger:
   event_data:
     entity_id: timer.lounge
 condition:
-- condition: state
-  entity_id: media_player.yamaha_receiver
-  state: 'off'
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: media_player.yamaha_receiver
+      state: 'off'
+    - condition: template
+      value_template: "{{ not is_state('sensor.last_indoor_motion', 'binary_sensor.lounge_motion') }}"
 action:
 - service: light.turn_off
   data:

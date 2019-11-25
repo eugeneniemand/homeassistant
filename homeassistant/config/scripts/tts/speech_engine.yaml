@@ -5,15 +5,15 @@ speech_engine:
       message: >-
         {%- macro arm_alarm() -%}
           {{ [
-              'Its time to arm the alarm. All Done.',
-              'Alarm has been armed, Good night.'
+              'Arming the alarm now',
+              'I have armed the alarm'
             ]|random }}
         {%- endmacro -%}
         
         {%- macro disarm_alarm() -%}          
           {{[
-            'Dont worry, alarm has now been disarmed.',
-            'Everything is ok and I have turned off the alarm.'
+            'Disarming the alarm now',
+            'I have disarmed the alarm'
             ]|random}}
         {%- endmacro -%}
 
