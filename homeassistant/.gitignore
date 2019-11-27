@@ -16,5 +16,5 @@ core
 /data/*.db
 /data/state.json
 alexa_media*pickle
-tts/
+tts/*
 custom_components/

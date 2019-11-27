@@ -90,6 +90,10 @@ speech_engine:
           {{ inside_weather() }}
         {% endif %}
 
+        {% if call_ac_watchdog == 1 %}
+          "One or more AC's are still on"
+        {% endif %}
+
         {% if call_thermostat_changed == 1 %}
           {{ thermostat_changed() }}
         {% endif %}

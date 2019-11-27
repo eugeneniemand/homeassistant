@@ -1,0 +1,8 @@
+tts_restore_volume:
+  alias: TTS Restore Volumes
+  sequence:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.{{device}}
+      volume_level: "{{ states('input_number.' + device + '_media_player_volume') }}"
+ 

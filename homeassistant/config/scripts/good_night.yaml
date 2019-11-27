@@ -5,3 +5,18 @@ good_night:
     entity_id: 
     - group.downstairs_lights
     - group.upstairs_lights
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.is_bedtime
+  - service: alarm_control_panel.alarm_arm_home
+    entity_id: alarm_control_panel.yale_smart_alarm
+  - service: script.ac_left_on
+  - service: script.speech_engine
+    data:
+      call_alarm_check: 1
+      call_window_check: 1
+      call_door_check: 1
+  - service: script.notification_engine
+    data:
+      call_alarm_check: 1
+      call_door_check: 1
+      call_window_check: 1

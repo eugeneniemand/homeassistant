@@ -14,24 +14,4 @@ condition:
     entity_id: binary_sensor.niemands_home
     state: 'on'
 action:
-- service: light.turn_off
-  entity_id: group.downstairs_lights
-- service: light.turn_off
-  entity_id: group.upstairs_lights
-- service: input_boolean.turn_on
-  entity_id: input_boolean.is_bedtime
-- condition: state
-  entity_id: alarm_control_panel.yale_smart_alarm
-  state: disarmed
-- service: alarm_control_panel.alarm_arm_home
-  entity_id: alarm_control_panel.yale_smart_alarm
-- service: script.speech_engine
-  data:
-    call_alarm_check: 1
-    call_window_check: 1
-    call_door_check: 1
-- service: script.notification_engine
-  data:
-    call_alarm_check: 1
-    call_door_check: 1
-    call_window_check: 1
+- service: script.good_night

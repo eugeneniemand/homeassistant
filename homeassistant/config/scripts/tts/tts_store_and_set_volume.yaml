@@ -1,0 +1,22 @@
+tts_store_and_set_volume:
+  alias: TTS Store and Set Volumes
+  sequence:
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.{{device}}_media_player_volume
+      value: >
+        {% if is_state('media_player.' + device, 'playing') %} 
+          {{ state_attr('media_player.' + device, 'volume_level') }}
+        {% else %}
+          {{ state_attr('input_number.' + device + '_media_player_volume', 'initial') }}
+        {% endif %}
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.{{device}}
+      volume_level:  >
+        {% set hour=states("sensor.time").split(':')[0] | int %}
+        {% if hour >= 8 and hour <19 %}
+          {{ states('input_number.' + device + '_tts_day_volume') }}
+        {% else %}
+          {{ states('input_number.' + device + '_tts_night_volume') }}
+        {% endif %}
