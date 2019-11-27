@@ -136,6 +136,8 @@ views:
         entities:
           - entity: binary_sensor.toilet_motion
             secondary_info: last-changed
+          - entity: binary_sensor.entrance_motion
+            secondary_info: last-changed
           - entity: binary_sensor.kitchen_motion
             secondary_info: last-changed
           - entity: binary_sensor.lounge_motion
@@ -272,6 +274,8 @@ views:
         entities:
         - entity: sensor.toilet_lux
           name: Toilet
+        - entity: sensor.entrance_lux
+          name: Entrance
         - entity: sensor.kitchen_lux
           name: Kitchen
         - entity: sensor.lounge_lux
@@ -328,6 +332,8 @@ views:
         entities:
         - entity: input_number.toilet_lux_limit
         - entity: sensor.toilet_lux
+        - entity: input_number.entrance_lux_limit
+        - entity: sensor.entrance_lux
         - entity: input_number.kitchen_lux_limit
         - entity: sensor.kitchen_lux
         - entity: input_number.lounge_lux_limit

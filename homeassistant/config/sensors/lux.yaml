@@ -5,6 +5,12 @@
   unit_of_measurement: lux
   device_class: illuminance
 - platform: mqtt
+  name: Entrance Lux
+  state_topic: "zigbee2mqtt/entrance_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
   name: Lounge Lux
   state_topic: "zigbee2mqtt/lounge_motion"
   value_template: "{{ value_json.illuminance }}"

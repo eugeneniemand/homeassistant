@@ -39,6 +39,11 @@ toilet_lux_limit:
   max: 200
   step: 10
 
+entrance_lux_limit:
+  min: 0
+  max: 200
+  step: 10
+
 lounge_lux_limit:
   min: 0
   max: 200

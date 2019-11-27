@@ -53,3 +53,8 @@
   state_topic: "zigbee2mqtt/office_motion"  
   value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
   device_class: motion
+- platform: mqtt
+  name: Entrance Motion
+  state_topic: "zigbee2mqtt/entrance_motion"  
+  value_template: "{{ 'ON' if value_json.occupancy else 'OFF' }}"
+  device_class: motion

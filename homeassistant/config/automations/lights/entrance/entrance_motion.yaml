@@ -1,0 +1,27 @@
+alias: Entrance Motion Turn On Lights
+initial_state: true
+trigger:
+- platform: mqtt
+  topic: 'zigbee2mqtt/entrance_motion'
+condition:
+  condition: and 
+  conditions:
+  - condition: template
+    value_template: "{{ trigger.payload_json.occupancy == true }}"
+  - condition: or
+    conditions:     
+      - condition: template
+        value_template: "{{states('sensor.entrance_lux') | int <= states('input_number.entrance_lux_limit') | int}}"
+      - condition: state
+        entity_id: light.entrance
+        state: 'on'
+action:
+- service: timer.cancel
+  data:
+    entity_id: timer.entrance
+- service: timer.start
+  data_template:
+    entity_id: timer.entrance
+    duration: 00:{{ '{:02}'.format(states('input_number.entrance_timeout') | int) }}:00
+- service: light.turn_on
+  entity_id: light.entrance
