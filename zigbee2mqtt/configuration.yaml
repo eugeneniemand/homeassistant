@@ -18,8 +18,8 @@ groups:
     devices:
       - '0x000d6ffffe4b2b06'
       - '0x000d6ffffe4b5c14'
-      - '0x000d6ffffe62f426'
       - '0x000d6ffffe5d5a23'
+      - '0x000d6ffffe62f426'
 advanced:
   channel: 15
   log_level: info
@@ -140,4 +140,7 @@ devices:
     retain: false
   '0x00158d00033ab698':
     friendly_name: toilet_window
+    retain: false
+  '0x00158d0004142fef':
+    friendly_name: 'entrance_motion'
     retain: false

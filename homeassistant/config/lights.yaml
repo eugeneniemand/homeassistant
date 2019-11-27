@@ -29,13 +29,6 @@
   payload_off: "OFF"
   retain: false
 - platform: mqtt
-  name: Floor
-  command_topic: "zigbee2mqtt/floor_light/set"
-  state_topic: "zigbee2mqtt/floor_light"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  brightness: true
-  schema: json
-- platform: mqtt
   name: Toilet
   command_topic: "zigbee2mqtt/toilet_light/set"
   state_topic: "zigbee2mqtt/toilet_light"

@@ -4,6 +4,7 @@ downstairs_lights:
     - light.entrance
     - light.toilet
     - light.kitchen
+    - light.under_counter_lights
     - light.floor
     - light.lounge
     - light.dining

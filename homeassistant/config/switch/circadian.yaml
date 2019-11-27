@@ -5,6 +5,7 @@
     - light.jayden
     - light.aaron
     - light.master
+    - light.office
   lights_brightness:
     - light.floor
     - light.utility
