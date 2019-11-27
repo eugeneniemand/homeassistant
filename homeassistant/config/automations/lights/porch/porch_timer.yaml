@@ -1,4 +1,4 @@
-alias: Entrance Timer
+alias: Porch Timer
 initial_state: true
 trigger:
 - platform: event

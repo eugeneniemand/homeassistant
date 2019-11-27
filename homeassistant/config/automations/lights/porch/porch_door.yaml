@@ -1,29 +1,21 @@
-alias: Porch on Ring Ding
+alias: Porch front door open
 initial_state: true
 trigger:
 - platform: state
-  entity_id: binary_sensor.ring_front_door_heybridge_ding
+  entity_id: sensor.front_door_contact
   to: 'on'
 condition:
 - condition: state
   entity_id: binary_sensor.night
   state: 'on'
+- condition: state
+  entity_id: light.porch
+  state: 'off'
 action:
-- delay: '00:00:04'
-- service: light.turn_on
-  entity_id: light.entrance
-- delay: '00:00:01'
 - service: light.turn_on
   data_template:
     entity_id: light.porch
     brightness_pct: "{{ state_attr('switch.circadian_lighting_circadian_lighting', 'brightness') | int }}"
-- service: timer.cancel
-  data:
-    entity_id: timer.entrance
-- service: timer.start
-  data:
-    entity_id: timer.entrance
-    duration: 00:05:00
 - service: timer.cancel
   data:
     entity_id: timer.porch
