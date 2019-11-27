@@ -1,0 +1,7 @@
+good_night:
+  alias: Good Night
+  sequence:
+  - service: homeassistant.turn_off
+    entity_id: 
+    - group.downstairs_lights
+    - group.upstairs_lights
