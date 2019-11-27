@@ -30,16 +30,5 @@ action:
   entity_id: switch.toilet
 - service: light.turn_on
   data_template:
-    transition: 1
     entity_id: light.toilet
-    brightness_pct: >
-      {% set hour=states("sensor.time").split(':')[0] | int %}
-      {% if hour >= 5 and hour < 8 %}
-        30
-      {% elif hour >= 8 and hour <21 %}
-        100
-      {% elif hour >= 21 and hour <24 %}
-        10
-      {% else %}
-        1
-      {% endif %}
+    brightness_pct: "{{ state_attr('switch.circadian_lighting_circadian_lighting', 'brightness') | int }}"

@@ -188,3 +188,5 @@ speedtestdotnet:
 
 shell_command:
   restart_hass: 'curl http://127.0.0.1:8126/container/home-assistant/restart'
+
+circadian_lighting:
