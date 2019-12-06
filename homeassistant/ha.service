@@ -4,8 +4,8 @@ Requires=docker.service
 After=docker.service
 
 [Service]
-ExecStart=/home/pi/homeassistant/service start
-ExecStop=/home/pi/homeassistant/service stop
+ExecStart=/home/pi/ha/homeassistant/service start
+ExecStop=/home/pi/ha/homeassistant/service stop
 RemainAfterExit=yes
 
 [Install]

@@ -1,7 +1,0 @@
-tts_test:
-  alias: TTS Test On Kitchen
-  sequence:
-  - service: script.tts_kitchen
-    data:
-      message: "This is a test"
-      volume: 0.5

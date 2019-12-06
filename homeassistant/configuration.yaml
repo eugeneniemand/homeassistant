@@ -8,7 +8,9 @@ homeassistant:
   latitude: 51.609286097686514
   longitude: 0.5274361874258462
   elevation: 15
-
+  whitelist_external_dirs: 
+    - /tmp
+    
 ios:
 
 system_health:
@@ -22,14 +24,15 @@ zone:
     latitude: 51.609286097686514
     longitude: 0.5274361874258462
     elevation: 15
-    radius: 50
+    radius: 40
   - name: Silva Island
     latitude: 51.601978
     longitude: 0.535576
     radius: 30
   - name: Eugene Office
-    latitude: 51.533945
-    longitude: -0.139709
+    latitude: 51.533428
+    longitude: -0.139532
+    radius: 50
   - name: Liverpool Street Station
     latitude: 51.518740
     longitude: -0.081400
@@ -139,7 +142,6 @@ camera:
     name: Moto
     still_image_url: http://192.168.1.13/cgi/jpg/image.cgi
     stream_source: rtsp://user:pass@192.168.1.13:6667/blinkhd
-  - platform: ring
 
 ring:
   username: !secret ring_username

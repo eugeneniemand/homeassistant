@@ -1,8 +1,9 @@
 speech_engine:
   sequence:
-  - service: script.tts_all
+  - service: input_text.set_value
     data_template:     
-      message: >-
+      entity_id: input_text.notification_message
+      value: >-
         {%- macro arm_alarm() -%}
           {{ [
               'Arming the alarm now',
@@ -58,7 +59,7 @@ speech_engine:
         {%- endmacro -%}
 
         {# ********************************************* #}
-        {#  ******** Start the Speech routines ********  #}
+        {# ******** Start the Speech routines ********** #}
         {# ********************************************* #}
         {% if call_announcement == 1 %}
           {% if now().strftime('%H')|int < 12 and now().strftime('%H')|int >= 5 %}

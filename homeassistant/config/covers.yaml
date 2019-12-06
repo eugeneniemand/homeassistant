@@ -14,4 +14,3 @@
   position_open: 100
   position_closed: 0
   qos: 0
-  value_template: '{{ value.x }}'

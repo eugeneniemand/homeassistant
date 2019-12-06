@@ -1,0 +1,6 @@
+test_tts_all:
+  alias: Test TTS On All Echos
+  sequence:
+  - service: script.tts_all
+    data:
+      message: "{{ states('input_text.notification_message') }}"

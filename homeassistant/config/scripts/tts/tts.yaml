@@ -1,0 +1,26 @@
+tts:
+  alias: TTS On Specific Device
+  sequence:
+  - condition: template
+    value_template: "{{ message|trim|length > 0 }}"
+  - service: script.tts_store_and_set_volume
+    data_template:
+      device: "{{device}}"
+
+  - delay: 
+      milliseconds: 500
+
+  - service: notify.alexa_media
+    data_template:
+      target: 
+        - media_player.{{device}}
+      data:
+        type: announce
+      message: "{{ message }}"
+
+  - delay: 00:00:10
+
+  - service: script.tts_restore_volume
+    data_template:
+      device: "{{device}}"
+  

@@ -4,5 +4,5 @@ tts_restore_volume:
   - service: media_player.volume_set
     data_template:
       entity_id: media_player.{{device}}
-      volume_level: "{{ states('input_number.' + device + '_media_player_volume') }}"
+      volume_level: "{{ states('input_number.' + device + '_media_player_volume') | float }}"
  

@@ -9,18 +9,36 @@ tts_all:
   - service: script.tts_store_and_set_volume
     data_template:
       device: kitchen
+  - service: script.tts_store_and_set_volume
+    data_template:
+      device: aaron
+  - service: script.tts_store_and_set_volume
+    data_template:
+      device: jayden
+  - service: script.tts_store_and_set_volume
+    data_template:
+      device: office
+  - service: script.tts_store_and_set_volume
+    data_template:
+      device: lounge
+
+  - delay: 
+      milliseconds: 500
   
   - service: notify.alexa_media
     data_template:
       target: 
-        - media_player.kitchen
         - media_player.master
-        - media_player.jayden
         - media_player.lounge
+        - media_player.kitchen
         - media_player.office
+        - media_player.jayden
+        - media_player.aaron
       data:
           type: announce
       message: "{{ message }}"
+
+  - delay: 00:00:10
   
   - service: script.tts_restore_volume
     data_template:
@@ -28,3 +46,15 @@ tts_all:
   - service: script.tts_restore_volume
     data_template:
       device: kitchen
+  - service: script.tts_restore_volume
+    data_template:
+      device: aaron
+  - service: script.tts_restore_volume
+    data_template:
+      device: jayden
+  - service: script.tts_restore_volume
+    data_template:
+      device: office
+  - service: script.tts_restore_volume
+    data_template:
+      device: lounge

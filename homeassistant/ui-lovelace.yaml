@@ -1,4 +1,7 @@
 title: My Awesome Home
+resources:
+  - url: /local/community/lovelace-slider-entity-row/slider-entity-row.js
+    type: module
 views:
   - title: Lights
     icon: mdi:lightbulb-on-outline
@@ -90,7 +93,19 @@ views:
           - entity: light.jayden_bedside
             tap_action: 
               action: toggle
-
+      - title: Christmas
+        type: glance
+        show_state: false
+        columns: 4
+        entities:
+          - entity: switch.christmas_indoor_sonoff
+            name: Inside
+            tap_action: 
+              action: toggle
+          - entity: switch.christmas_outside
+            name: Outside
+            tap_action: 
+              action: toggle
   - title: Security
     icon: mdi:lock
     cards:
@@ -168,26 +183,6 @@ views:
             secondary_info: last-changed
           - entity: binary_sensor.ring_front_door_motion
             secondary_info: last-changed
-  - title: Cameras
-    icon: mdi:camera
-    cards:
-      - type: picture-glance
-        title: Road
-        camera_image: camera.foscam_camera
-        entities: []
-      - type: picture-glance
-        title: Front Door
-        camera_image: camera.front_door
-        entities: []
-      - type: picture-glance
-        title: Garage
-        camera_image: camera.garage
-        entities: []
-      - type: picture-glance
-        title: Mom Front Door
-        camera_image: camera.front_door_2
-        entities: []
-
   - title: Climate
     icon: mdi:thermometer
     cards:
@@ -203,16 +198,8 @@ views:
       - type: thermostat
         entity: climate.melcloud_aaron_177590
         name: Aaron
-      - type: gauge
-        name: Outside
-        entity: sensor.met_office_temperature
-        min: -10
-        max: 35
-      - type: gauge
-        name: Feels Like
-        entity: sensor.met_office_feels_like_temperature
-        min: -10
-        max: 35
+      - type: weather-forecast
+        entity: weather.dark_sky
       - type: history-graph
         title: Tempratures
         entities:
@@ -257,11 +244,6 @@ views:
           - input_number.aaron_timeout
           - input_number.master_timeout
           - input_number.office_timeout
-  - title: Weather
-    icon: mdi:weather-partlycloudy
-    cards:
-    - type: weather-forecast
-      entity: weather.dark_sky
   - title: Lux
     icon: mdi:alarm-light-outline
     panel: true
@@ -313,8 +295,8 @@ views:
           name: Speedtest Ping
         - entity: sensor.speedtest_upload
           name: Speedtest Upload
-  - title: Settings
-    icon: mdi:settings
+  - title: Config
+    icon: mdi:counter
     cards:
       - title: Volumes
         type: entities
@@ -322,10 +304,21 @@ views:
         entities:
           - input_number.kitchen_media_player_volume
           - input_number.master_media_player_volume
+          - type: custom:slider-entity-row
+            entity: input_number.kitchen_tts_day_volume
+            full_row: true
           - input_number.kitchen_tts_day_volume
           - input_number.kitchen_tts_night_volume
           - input_number.master_tts_day_volume
           - input_number.master_tts_night_volume
+          - input_number.aaron_tts_day_volume
+          - input_number.aaron_tts_night_volume
+          - input_number.jayden_tts_day_volume
+          - input_number.jayden_tts_night_volume
+          - input_number.office_tts_day_volume
+          - input_number.office_tts_night_volume
+          - input_number.lounge_tts_day_volume
+          - input_number.lounge_tts_night_volume
       - title: Downstairs Lux Limits
         type: entities
         show_header_toggle: false
@@ -358,13 +351,16 @@ views:
         - entity: sensor.aaron_lux
         - entity: input_number.office_lux_limit
         - entity: sensor.office_lux
+  - title: Settings
+    icon: mdi:settings
+    cards:
       - title: Settings
         type: glance
         entities:
           - entity: input_boolean.work_tomorrow
             tap_action: 
               action: toggle
-          - input_datetime.work_routine_time
+          - entity: input_datetime.work_routine_time
           - entity: script.restart_hass
             icon: mdi:refresh
             name: Restart HASS

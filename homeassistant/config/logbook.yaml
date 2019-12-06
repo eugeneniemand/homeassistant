@@ -29,7 +29,6 @@ exclude:
     - switch.sonoff_100031bfbd
     - script.tts_all
     - script.tts_kitchen
-    - script.tts_upstairs
     - sensor.jayden_vibration_action
     - sensor.jayden_vibration_battery
     - sensor.jayden_vibration_linkquality

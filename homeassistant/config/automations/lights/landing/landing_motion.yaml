@@ -30,5 +30,5 @@ action:
   entity_id: switch.landing
 - service: light.turn_on
   data_template:
-    entity_id: light.dining
+    entity_id: light.landing
     brightness_pct: "{{ state_attr('switch.circadian_lighting_circadian_lighting', 'brightness') | int }}"

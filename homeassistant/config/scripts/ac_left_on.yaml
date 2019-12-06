@@ -33,3 +33,6 @@ ac_left_on:
   - service: script.speech_engine
     data:
       call_ac_watchdog: 1
+  - service: script.tts_all
+    data:
+      message: "{{ states('input_text.notification_message') }}"

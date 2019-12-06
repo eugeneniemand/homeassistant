@@ -1,9 +1,10 @@
 alias: Sunset Close Blinds
 initial_state: true
 trigger:
-- event: sunset
-  platform: sun
-  offset: "-00:45:00"
+- platform: numeric_state
+  entity_id: sun.sun
+  value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+  below: 2.5
 condition: []
 action:
 - service: cover.close_cover
