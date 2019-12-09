@@ -92,17 +92,27 @@ speech_engine:
         {% endif %}
 
         {% if call_ac_watchdog == 1 %}
-          "One or more AC's are still on"
+          {% set acOnCount = states.climate | selectattr('state','eq','on') | list | count %}
+          {% if acOnCount > 0 %}
+            "{{acOnCount}} AC's are still on"
+          {% endif %}
+        {% endif %}
+
+        {% if call_check_lights_count == 1 %}
+          {% set onCount = states.lights | selectattr('state','eq','on') | list | count %}
+          {% if onCount > 0 %}
+            "{{onCount}} lights are still on"
+          {% endif %}
         {% endif %}
 
         {% if call_thermostat_changed == 1 %}
           {{ thermostat_changed() }}
         {% endif %}
 
-        {% if call_check_lights == 1 %}
+        {% if call_check_lights_info == 1 %}
           {% set returnVal=check_ligts_on() %}
           {% if returnVal|trim|length > 0 %}
-            "Lights Still On: {{returnVal}}"
+            "Lights On: {{returnVal}}"
           {% endif %}
         {% endif %}
 

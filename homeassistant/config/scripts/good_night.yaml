@@ -9,14 +9,15 @@ good_night:
     entity_id: input_boolean.is_bedtime
   - service: alarm_control_panel.alarm_arm_home
     entity_id: alarm_control_panel.yale_smart_alarm
-  - service: script.ac_left_on
+  - wait_template: "{{states('alarm_control_panel.yale_smart_alarm') == 'armed_home'}}"
   - service: script.speech_engine
     data:
       call_alarm_check: 1
       call_window_check: 1
       call_door_check: 1
-  - service: script.notification_engine
+      call_ac_watchdog: 1
+      call_check_lights: 1
+  - service: script.tts
     data:
-      call_alarm_check: 1
-      call_door_check: 1
-      call_window_check: 1
+      device: master
+      message: "{{ states('input_text.notification_message') }}"

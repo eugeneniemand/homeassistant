@@ -22,9 +22,12 @@ condition:
 action:
 - service: alarm_control_panel.alarm_arm_home
   entity_id: alarm_control_panel.yale_smart_alarm
-- delay: '00:00:15'
+- wait_template: "{{states('alarm_control_panel.yale_smart_alarm') == 'armed_home'}}"
 - service: script.speech_engine
   data:
     call_alarm_arm: 1
     call_window_check: 1
     call_door_check: 1
+- service: script.tts_all
+  data:
+    message: "{{ states('input_text.notification_message') }}"

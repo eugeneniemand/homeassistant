@@ -4,9 +4,23 @@ trigger:
 - platform: time_pattern
   hours: /1
 condition:
+  - condition: state
+    entity_id: input_boolean.is_bedtime
+    state:  'off'
 action:
 - service: script.speech_engine
   data:
     call_window_check: 1
     call_door_check: 1
-    call_check_lights: 1
+    call_check_lights_count: 1
+- service: script.tts_all
+  data:
+    message: "{{ states('input_text.notification_message') }}"
+- service: script.speech_engine
+  data:
+    call_window_check: 1
+    call_door_check: 1
+    call_check_lights_info: 1
+- service: notify.iphones
+  data_template:     
+    message: "{{ states('input_text.notification_message') }}"
