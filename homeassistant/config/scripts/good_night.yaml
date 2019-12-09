@@ -16,8 +16,9 @@ good_night:
       call_window_check: 1
       call_door_check: 1
       call_ac_watchdog: 1
-      call_check_lights: 1
+      call_check_lights_count: 1
+      type: tts
   - service: script.tts
     data:
       device: master
-      message: "{{ states('input_text.notification_message') }}"
+      message: "{{ states('input_text.tts_message') }}"

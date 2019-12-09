@@ -11,6 +11,11 @@ condition:
 action:
 - service: alarm_control_panel.alarm_disarm
   entity_id: alarm_control_panel.yale_smart_alarm
+- wait_template: "{{states('alarm_control_panel.yale_smart_alarm') == 'disarmed'}}"
 - service: script.speech_engine
   data:
     call_alarm_disarm: 1
+    type: tts
+- service: script.tts_all
+  data:
+    message: "{{ states('input_text.tts_message') }}"

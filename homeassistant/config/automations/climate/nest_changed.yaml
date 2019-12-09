@@ -1,9 +1,0 @@
-alias: Nest Changed
-trigger:
-  platform: state
-  entity_id:  sensor.entryway_thermostat_target
-
-action:
-  service: script.speech_engine
-  data:
-    call_thermostat_changed: 1

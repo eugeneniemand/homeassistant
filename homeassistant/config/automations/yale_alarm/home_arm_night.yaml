@@ -28,6 +28,7 @@ action:
     call_alarm_arm: 1
     call_window_check: 1
     call_door_check: 1
+    type: tts
 - service: script.tts_all
   data:
-    message: "{{ states('input_text.notification_message') }}"
+    message: "{{ states('input_text.tts_message') }}"

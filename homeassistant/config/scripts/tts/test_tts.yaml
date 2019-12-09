@@ -3,4 +3,4 @@ test_tts_all:
   sequence:
   - service: script.tts_all
     data:
-      message: "{{ states('input_text.notification_message') }}"
+      message: "{{ states('input_text.tts_message') }}"

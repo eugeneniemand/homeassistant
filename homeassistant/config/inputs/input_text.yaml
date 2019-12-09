@@ -2,5 +2,7 @@ eugene_location:
   initial: "unknown"
 hailey_location:
   initial: "unknown"
-notification_message:
-  initial: "NotSet"
+push_message:
+  initial: ""
+tts_message:
+  initial: ""

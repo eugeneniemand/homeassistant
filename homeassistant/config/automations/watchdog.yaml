@@ -13,14 +13,16 @@ action:
     call_window_check: 1
     call_door_check: 1
     call_check_lights_count: 1
+    type: tts
 - service: script.tts_all
   data:
-    message: "{{ states('input_text.notification_message') }}"
+    message: "{{ states('input_text.tts_message') }}"
 - service: script.speech_engine
   data:
     call_window_check: 1
     call_door_check: 1
     call_check_lights_info: 1
+    type: push
 - service: notify.iphones
   data_template:     
-    message: "{{ states('input_text.notification_message') }}"
+    message: "{{ states('input_text.push_message') }}"

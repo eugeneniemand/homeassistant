@@ -2,7 +2,7 @@ speech_engine:
   sequence:
   - service: input_text.set_value
     data_template:     
-      entity_id: input_text.notification_message
+      entity_id: input_text.{{type}}_message
       value: >-
         {%- macro arm_alarm() -%}
           {{ [
@@ -99,9 +99,9 @@ speech_engine:
         {% endif %}
 
         {% if call_check_lights_count == 1 %}
-          {% set onCount = states.lights | selectattr('state','eq','on') | list | count %}
+          {% set onCount = states.light | selectattr('state','eq','on') | list | count %}
           {% if onCount > 0 %}
-            "{{onCount}} lights are still on"
+            "{{onCount}} lights on"
           {% endif %}
         {% endif %}
 

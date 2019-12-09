@@ -13,6 +13,7 @@ action:
     call_welcome_home: 1
     call_alarm_check: 1
     call_inside_weather: 1
+    type: tts
 - service: script.tts_all
   data:
-    message: "{{ states('input_text.notification_message') }}"
+    message: "{{ states('input_text.tts_message') }}"
