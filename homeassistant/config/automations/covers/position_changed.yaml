@@ -1,0 +1,14 @@
+alias: Blind Position Changed
+trigger:
+  - platform: numeric_state
+    entity_id: cover.lounge_blind
+    value_template: "{{ state.attributes.current_position }}"
+    below: 100
+    above: 0
+condition:
+action:
+  - service: input_number.set_value
+    entity_id: input_number.blind_position
+    data_template:
+      value: "{{ state_attr('cover.lounge_blind', 'current_position') | float }}"
+initial_state: true

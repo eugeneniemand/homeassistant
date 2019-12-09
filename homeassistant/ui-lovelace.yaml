@@ -135,8 +135,15 @@ views:
         type: entities
         show_header_toggle: false
         entities:
+          - type: section
+            label: Blind Position
           - entity: cover.lounge_blind
             secondary_info: last-changed
+          - type: custom:slider-entity-row
+            entity: input_number.blind_position
+            full_row: true
+          - type: section
+            label: Contact Sensors
           - entity: sensor.lounge_left_window
             secondary_info: last-changed
           - entity: sensor.lounge_right_window

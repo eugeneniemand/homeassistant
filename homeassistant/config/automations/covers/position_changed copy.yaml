@@ -1,0 +1,11 @@
+alias: Blind Position Updated
+trigger:
+  - platform: state
+    entity_id: input_number.blind_position
+condition:
+action:
+  - service: cover.set_cover_position
+    entity_id: cover.lounge_blind
+    data_template:
+      position: "{{states('input_number.blind_position') | int}}"
+initial_state: true
