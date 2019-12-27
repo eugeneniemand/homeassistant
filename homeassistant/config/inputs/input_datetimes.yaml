@@ -6,3 +6,7 @@ work_routine_time:
   name: Work Routine
   has_date: false
   has_time: true
+  
+eugene_laptop_heartbeat:
+  has_date: true
+  has_time: true

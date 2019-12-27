@@ -17,3 +17,7 @@ kids_sleeping:
   name: Kids Sleeping
   initial: off
   icon: mdi:sleep
+
+eugene_laptop_idle:
+  initial: off
+  icon: mdi:laptop-off

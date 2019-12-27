@@ -1,0 +1,13 @@
+initial_state: true
+alias: Eugene Laptop Idle Update
+trigger:
+  platform: webhook
+  webhook_id: eugene_laptop_idle_update
+condition:
+action:
+- service_template: "{% if (trigger.json.idle | int) == 1 %} input_boolean.turn_on {% else %} input_boolean.turn_off {% endif %}"
+  entity_id: input_boolean.eugene_laptop_idle
+- service: input_datetime.set_datetime
+  entity_id: input_datetime.eugene_laptop_heartbeat
+  data_template:
+      datetime: "{{now().strftime('%Y-%m-%d %H:%M:%S')}}"
