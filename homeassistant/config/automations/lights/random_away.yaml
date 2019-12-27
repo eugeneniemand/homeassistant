@@ -14,8 +14,7 @@ condition:
     entity_id: binary_sensor.night
     state: 'on'
 action:
-- delay: 00:{{ '{:02}'.format(range(1,10) | random | int) }}:00
-- service: homeassistant.toggle
-  data_template:
+- delay: "00:{{ '{:02}'.format(range(1,10) | random | int) }}:00"
+- data_template:
     entity_id: '{{ states.group.away_random_lights.attributes.entity_id | random }}'
-  
+  service: homeassistant.toggle

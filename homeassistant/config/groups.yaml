@@ -42,6 +42,37 @@ upstairs_switches:
     - switch.jayden
     - switch.master
 
+home_random_lights:
+  name: "Home Random Lights"
+  entities:
+    - light.entrance
+    - light.toilet
+    - light.kitchen
+    - light.floor
+    - light.lounge
+    - light.dining
+    - light.porch
+    - light.utility
+
+away_random_lights:
+  name: "Away Random Lights"
+  entities:
+    - light.entrance
+    - light.toilet
+    - light.kitchen
+    - light.floor
+    - light.lounge
+    - light.dining
+    - light.porch
+    - light.utility
+    - light.landing
+    - light.bathroom
+    - light.master
+    - light.jayden
+    - light.aaron
+    - light.master
+    - light.office
+
 light_timers:
   name: Light Timers
   entities:
