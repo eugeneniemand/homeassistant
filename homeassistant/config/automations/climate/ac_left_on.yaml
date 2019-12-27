@@ -1,6 +1,0 @@
-alias: AC Left On
-trigger:
-  platform: time_pattern
-  hours: /1
-action:
-  - service: script.ac_left_on

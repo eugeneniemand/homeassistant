@@ -2,6 +2,10 @@ title: My Awesome Home
 resources:
   - url: /local/community/lovelace-slider-entity-row/slider-entity-row.js
     type: module
+  - url: /community_plugin/lovelace-card-tools/card-tools.js
+    type: module
+  - url: /community_plugin/secondaryinfo-entity-row/secondaryinfo-entity-row.js
+    type: js
 views:
   - title: Lights
     icon: mdi:lightbulb-on-outline
@@ -115,6 +119,14 @@ views:
           - binary_sensor.eugene
           - binary_sensor.hailey
           - binary_sensor.niemands_home
+      - type: entities
+        title: Devices
+        show_header_toggle: false
+        entities:
+        - entity: input_boolean.eugene_laptop_idle
+          name: Eugene Laptop Idle
+          type: "custom:secondaryinfo-entity-row"
+          secondary_info: "Last Heartbeat: [[ input_datetime.eugene_laptop_heartbeat ]]"
       - name: House Alarm
         type: alarm-panel
         entity: alarm_control_panel.yale_smart_alarm

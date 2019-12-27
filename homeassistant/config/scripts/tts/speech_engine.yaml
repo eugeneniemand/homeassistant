@@ -92,7 +92,7 @@ speech_engine:
         {% endif %}
 
         {% if call_ac_watchdog == 1 %}
-          {% set acOnCount = states.climate | selectattr('state','eq','on') | list | count %}
+          {% set acOnCount = states.climate | selectattr('state','ne','off') | list | count %}
           {% if acOnCount > 0 %}
             "{{acOnCount}} AC's are still on"
           {% endif %}
