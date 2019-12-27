@@ -1,0 +1,22 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        ".HA_VERSION": true,
+        ".cloud": true,
+        ".vscode": true,
+        "deps": true,
+        ".ios.conf": true,
+        ".ring_cache.pickle": true,
+        ".uuid": true,
+        "alexa_media.eugene.niemand@gmail.com.pickle": true,
+        "home-assistant.log": true,
+        "home-assistant_v2.db": true,
+        "custom_components": true,
+        ".storage": true
+    },
+    "explorerExclude.backup": null
+}
