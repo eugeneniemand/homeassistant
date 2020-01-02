@@ -9,7 +9,7 @@ services:
       - "9001:9001"
 
   zigbee2mqtt:
-    image: koenkk/zigbee2mqtt:arm32v6
+    image: koenkk/zigbee2mqtt:latest
     container_name: zigbee2mqtt
     volumes:
       - /home/pi/ha/zigbee2mqtt:/app/data

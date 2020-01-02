@@ -16,7 +16,9 @@
         "home-assistant.log": true,
         "home-assistant_v2.db": true,
         "custom_components": true,
-        ".storage": true
+        ".storage": true,
+        "home-assistant_v2.db-wal": true,
+        "home-assistant_v2.db-shm": true
     },
     "explorerExclude.backup": null
 }
