@@ -9,7 +9,7 @@ homeassistant:
   longitude: 0.5274361874258462
   elevation: 15
   whitelist_external_dirs: 
-    - /tmp
+    - /config/tmp
     
 ios:
 
@@ -142,6 +142,8 @@ alarm_control_panel:
 #     name: Moto
 #     still_image_url: http://192.168.1.13/cgi/jpg/image.cgi
 #     stream_source: rtsp://user:pass@192.168.1.13:6667/blinkhd
+camera:
+  - platform: ring
 
 ring:
   username: !secret ring_username
@@ -166,8 +168,8 @@ notify:
   - name: iphones
     platform: group
     services:
-      - service: ios_eugene
-      - service: ios_hailey
+      - service: mobile_app_eugenes_iphone
+      - service: mobile_app_hailey_s_iphone
   - platform: alexa_media
     name: alexa_media
 
