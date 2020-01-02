@@ -33,11 +33,15 @@ tts_all:
         - media_player.kitchen
         - media_player.office
         - media_player.jayden
-        - media_player.aaron
+        - media_player.aaro
       data:
           type: announce
-      message: "{{ message }}"
-
+      message: > 
+        {% if is_state("input_boolean.kids_sleeping", "on") %}
+          <amazon:effect name="whispered">{{message}}</amazon:effect>
+        {% else %}
+          {{message}}
+        {% endif %}
   - delay: 00:00:10
   
   - service: script.tts_restore_volume
