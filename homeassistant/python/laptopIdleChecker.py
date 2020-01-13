@@ -2,6 +2,7 @@ from ctypes import Structure, windll, c_uint, sizeof, byref
 import threading
 import requests
 import json
+import os
 
 prevMillis = 0
 timeout = 10.0
@@ -21,7 +22,7 @@ class LASTINPUTINFO(Structure):
 
 def PushHass(idleDuration):
     global timeout
-    url = '<WEBHOOK_URL>'
+    url = os.environ['HassLaptopIdleWebhook']
     headers = {'content-type': 'application/json'}
     data = json.dumps({"idle": 1 if idleDuration == timeout else 0})
     response = requests.post(url, data, headers=headers)
