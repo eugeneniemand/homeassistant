@@ -5,7 +5,7 @@ import json
 import os
 
 prevMillis = 0
-timeout = 10.0
+timeout = 300.0
 # Print out every n seconds the idle time, when moving mouse, this should be < 10
 def startPolling():
     global timeout
