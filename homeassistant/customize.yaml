@@ -6,3 +6,9 @@ climate.melcloud_master_176430:
   friendly_name: Master Climate
 climate.melcloud_jayden_177589:
   friendly_name: Jayden Climate
+group.ring_motion_random_lights:
+  hidden: true
+group.home_random_lights:
+  hidden: true
+group.away_random_lights:
+  hidden: true
