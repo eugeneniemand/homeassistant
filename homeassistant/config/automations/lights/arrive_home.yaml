@@ -10,17 +10,16 @@ condition:
   state: 'on'
 action:
 - service: light.turn_on
-  data:
-    entity_id:
-    - light.entrance
-    - light.porch
+  entity_id:
+  - light.entrance
+  - light.porch
 - service: timer.cancel
-  data:
-    entity_id:
-    - timer.entrance
-    - timer.porch
+  entity_id:
+  - timer.entrance
+  - timer.porch
 - service: timer.start
+  entity_id:
+  - timer.entrance
+  - timer.porch
   data:
-    entity_id:
-    - timer.entrance
-    - timer.porch
+    duration: 00:05:00
