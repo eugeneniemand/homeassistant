@@ -7,6 +7,7 @@ trigger:
   to: 'off'
 action:
 - service: alarm_control_panel.alarm_arm_away
+  entity_id: alarm_control_panel.yale_smart_alarm
 - service: script.notification_engine
   data:
     call_alarm_check: 1
