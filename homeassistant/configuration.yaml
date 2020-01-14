@@ -8,8 +8,6 @@ homeassistant:
   latitude: 51.609286097686514
   longitude: 0.5274361874258462
   elevation: 15
-  whitelist_external_dirs: 
-    - /config/tmp
     
 ios:
 
@@ -88,13 +86,12 @@ input_text: !include config/inputs/input_text.yaml
 light: !include config/lights.yaml
 logbook: !include config/logbook.yaml
 script: !include_dir_merge_named config/scripts/
+scene: !include scenes.yaml
 sensor: !include_dir_merge_list config/sensors/
 switch: !include_dir_merge_list config/switch/
 timer: !include config/timers.yaml
 
 weather:
-  - platform: metoffice
-    api_key: !secret metoffice_api_key
   - platform: darksky
     api_key: !secret darksky_api_key
     units: uk2
