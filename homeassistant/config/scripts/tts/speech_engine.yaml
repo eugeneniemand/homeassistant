@@ -26,6 +26,7 @@ speech_engine:
             {% endif %}
         {%- endmacro -%}
 
+
         {%- macro check_open_windows() -%}            
             {%- for state in states.binary_sensor -%}
                 {%- if state.state == 'on' and (state.entity_id).endswith('_window') -%}
@@ -91,17 +92,21 @@ speech_engine:
           {{ inside_weather() }}
         {% endif %}
 
+        {% if call_tele_check == 1 and is_state("media_player.yamaha_receiver", "on") %}
+            Tele is On,
+        {% endif %}
+
         {% if call_ac_watchdog == 1 %}
           {% set acOnCount = states.climate | selectattr('state','ne','off') | list | count %}
           {% if acOnCount > 0 %}
-            "{{acOnCount}} AC's are still on"
+            "{{acOnCount}} AC's are still on,"
           {% endif %}
         {% endif %}
 
         {% if call_check_lights_count == 1 %}
           {% set onCount = states.light | selectattr('state','eq','on') | list | count %}
           {% if onCount > 0 %}
-            "{{onCount}} lights on"
+            "{{onCount}} lights on,"
           {% endif %}
         {% endif %}
 
@@ -112,7 +117,7 @@ speech_engine:
         {% if call_check_lights_info == 1 %}
           {% set returnVal=check_ligts_on() %}
           {% if returnVal|trim|length > 0 %}
-            "Lights On: {{returnVal}}"
+            "Lights On: {{returnVal}},"
           {% endif %}
         {% endif %}
 
