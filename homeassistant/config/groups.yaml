@@ -42,6 +42,12 @@ upstairs_switches:
     - switch.jayden
     - switch.master
 
+ring_motion_random_lights:
+  name: "Ring Motion Random Lights"
+  entities:
+    - light.entrance
+    - light.porch
+    
 home_random_lights:
   name: "Home Random Lights"
   entities:
