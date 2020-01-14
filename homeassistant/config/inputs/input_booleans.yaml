@@ -3,19 +3,17 @@ work_tomorrow:
   initial: on
   icon: mdi:office-building
 
-is_night:
-  name: Is Night
-  initial: off
-  icon: mdi:weather-night
+motion_enabled:
+  name: Motion Enabled
+  initial: on
+  icon: mdi:motion-sensor
 
 is_bedtime:
   name: Is Bedtime
-  initial: off
   icon: mdi:bed-empty
 
 kids_sleeping:
   name: Kids Sleeping
-  initial: off
   icon: mdi:sleep
 
 eugene_laptop_idle:
