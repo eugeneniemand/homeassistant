@@ -21,9 +21,6 @@ condition:
     state: 'below_horizon'
 action:
 - entity_id:
-  - light.landing
-  - light.toilet
-  - light.kitchen
-  - light.floor
+  - light.bathroom
   service: light.turn_on
 initial_state: true

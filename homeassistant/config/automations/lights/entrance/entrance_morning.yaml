@@ -1,8 +1,8 @@
-alias: Kitchen Motion Turn Off Bed Time
+alias: Entrance Motion Turn Off Bed Time
 initial_state: true
 trigger:
 - platform: mqtt
-  topic: 'zigbee2mqtt/kitchen_motion'
+  topic: 'zigbee2mqtt/entrance_motion'
 condition:
 - condition: template
   value_template: "{{ trigger.payload_json.occupancy == true }}"
@@ -15,3 +15,6 @@ condition:
 action:
 - service: input_boolean.turn_off
   entity_id: input_boolean.is_bedtime
+- service: input_boolean.turn_off
+  entity_id: input_boolean.work_tomorrow
+ 
