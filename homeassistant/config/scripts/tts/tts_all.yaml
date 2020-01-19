@@ -3,28 +3,32 @@ tts_all:
   sequence:
   - condition: template
     value_template: "{{ message|trim|length > 0 }}"
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: master
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: kitchen
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: aaron
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: jayden
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: office
-  - service: script.tts_store_and_set_volume
-    data_template:
-      device: lounge
 
-  - delay: 
-      milliseconds: 500
+  - service: scene.create
+    data:
+      scene_id: before_tts
+      snapshot_entities: "media_player.master,media_player.lounge,media_player.kitchen,media_player.office,media_player.jayden,media_player.aaron"
   
+  - service: media_player.media_pause
+    entity_id:
+      - media_player.master
+      - media_player.lounge
+      - media_player.kitchen
+      - media_player.office
+      - media_player.jayden
+      - media_player.aaron
+
+  - service: media_player.volume_set
+    data:
+      entity_id:
+        - media_player.master
+        - media_player.office
+        - media_player.jayden
+        - media_player.aaron
+        - media_player.lounge
+        - media_player.kitchen
+      volume_level: 0.4
+
   - service: notify.alexa_media
     data_template:
       target: 
@@ -33,7 +37,7 @@ tts_all:
         - media_player.kitchen
         - media_player.office
         - media_player.jayden
-        - media_player.aaro
+        - media_player.aaron
       data:
           type: announce
       message: > 
@@ -42,23 +46,19 @@ tts_all:
         {% else %}
           {{message}}
         {% endif %}
-  - delay: 00:00:10
-  
-  - service: script.tts_restore_volume
-    data_template:
-      device: master
-  - service: script.tts_restore_volume
-    data_template:
-      device: kitchen
-  - service: script.tts_restore_volume
-    data_template:
-      device: aaron
-  - service: script.tts_restore_volume
-    data_template:
-      device: jayden
-  - service: script.tts_restore_volume
-    data_template:
-      device: office
-  - service: script.tts_restore_volume
-    data_template:
-      device: lounge
+
+  - delay: 00:00:05
+
+  - service: media_player.volume_set
+    data:
+      entity_id:
+        - media_player.master
+        - media_player.office
+        - media_player.jayden
+        - media_player.aaron
+        - media_player.lounge
+        - media_player.kitchen
+      volume_level: 0.1
+
+  - service: scene.turn_on
+    entity_id: scene.before_tts
