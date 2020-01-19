@@ -125,6 +125,7 @@ motion:
   entities:
     - binary_sensor.bathroom_motion
     - binary_sensor.toilet_motion
+    - binary_sensor.entrance_motion
     - binary_sensor.kitchen_motion
     - binary_sensor.utility_motion
     - binary_sensor.master_motion
