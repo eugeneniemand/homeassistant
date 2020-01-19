@@ -17,4 +17,8 @@ action:
   entity_id: input_boolean.is_bedtime
 - service: input_boolean.turn_off
   entity_id: input_boolean.work_tomorrow
- 
+- service: python_script.start_timer
+  entity_id: 
+    - timer.entrance
+    - timer.porch
+    - timer.bathroom
