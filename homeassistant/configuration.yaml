@@ -10,6 +10,7 @@ homeassistant:
   elevation: 15
     
 ios:
+python_script:
 
 system_health:
 system_log:
@@ -189,5 +190,6 @@ speedtestdotnet:
 
 shell_command:
   restart_hass: 'curl http://127.0.0.1:8126/container/home-assistant/restart'
+  restart_zigbee2mqtt: 'curl http://127.0.0.1:8126/container/zigbee2mqtt/restart'
 
 circadian_lighting:
