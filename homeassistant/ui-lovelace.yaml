@@ -383,6 +383,9 @@ views:
           - entity: input_boolean.motion_enabled
             tap_action: 
               action: toggle
+          - entity: input_boolean.kids_sleeping
+            tap_action: 
+              action: toggle
           - entity: script.restart_hass
             icon: mdi:refresh
             name: Restart HASS
