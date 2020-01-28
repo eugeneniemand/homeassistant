@@ -1,0 +1,9 @@
+alias: Mqtt to TTS
+initial_state: true
+trigger:
+- platform: mqtt
+  topic: 'appdaemon/notification/tts'
+action:
+- service: script.tts_all
+  data_template:
+    message: "{{ trigger.payload_json.message }}"

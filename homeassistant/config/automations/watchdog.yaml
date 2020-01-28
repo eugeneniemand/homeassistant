@@ -8,23 +8,25 @@ condition:
     entity_id: input_boolean.is_bedtime
     state:  'off'
 action:
-- service: script.speech_engine
+- service: mqtt.publish
   data:
-    call_window_check: 1
-    call_door_check: 1
-    call_check_lights_count: 1
-    call_tele_check: 1
-    type: tts
-- service: script.tts_all
-  data:
-    message: "{{ states('input_text.tts_message') }}"
-- service: script.speech_engine
-  data:
-    call_window_check: 1
-    call_door_check: 1
-    call_check_lights_info: 1
-    call_tele_check: 1
-    type: push
-- service: notify.iphones
-  data_template:     
-    message: "{{ states('input_text.push_message') }}"
+    topic: homeassistant/notification/tts
+    payload: '{"Messages":["Windows","Doors","LightsCount","Tele"]}'
+    # call_window_check: 1
+    # call_door_check: 1
+    # call_check_lights_count: 1
+    # call_tele_check: 1
+#     type: tts
+# - service: script.tts_all
+#   data:
+#     message: "{{ states('input_text.tts_message') }}"
+# - service: script.speech_engine
+#   data:
+#     call_window_check: 1
+#     call_door_check: 1
+#     call_check_lights_info: 1
+#     call_tele_check: 1
+#     type: push
+# - service: notify.iphones
+#   data_template:     
+#     message: "{{ states('input_text.push_message') }}"
