@@ -23,6 +23,21 @@ services:
         max-size: "5mb"
         max-file: "1"
 
+  appdaemon:
+    image: torkildr/rpi-appdaemon
+    container_name: appdaemon
+    ports:
+      - 5050:5050
+    volumes:
+      - /home/pi/ha/appdaemon:/conf
+    depends_on:
+      - home-assistant
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
   home-assistant:
     image: homeassistant/raspberrypi4-homeassistant:stable
     container_name: home-assistant
