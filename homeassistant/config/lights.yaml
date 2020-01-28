@@ -1,4 +1,3 @@
-- platform: ring
 - platform: mqtt
   name: Entrance
   state_topic: "shellies/shelly1-2C6D1B/relay/0"

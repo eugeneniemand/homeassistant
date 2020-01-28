@@ -135,18 +135,6 @@ alarm_control_panel:
     username: !secret yale_smart_alarm_username
     password: !secret yale_smart_alarm_password
 
-# camera:
-#   - platform: generic
-#     name: Moto
-#     still_image_url: http://192.168.1.13/cgi/jpg/image.cgi
-#     stream_source: rtsp://user:pass@192.168.1.13:6667/blinkhd
-camera:
-  - platform: ring
-
-ring:
-  username: !secret ring_username
-  password: !secret ring_password
-
 media_player:
   - platform: yamaha
     host: 192.168.1.229
