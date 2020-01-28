@@ -1,2 +1,4 @@
 homeassistant/www/community/**
 homeassistant/tmp/**
+*.pyc
+**/.vscode/**
