@@ -14,17 +14,25 @@
 			"**/.hg": false,
 			"**/CVS": false,
 			"**/.DS_Store": false,
-			"**/__init__.py": false,
-			"**/__pycache__": false
-		},
-		"explorerExclude.backup": {
-			"**/.git": true,
-			"**/.svn": true,
-			"**/.hg": true,
-			"**/CVS": true,
-			"**/.DS_Store": true,
 			"**/__init__.py": true,
 			"**/__pycache__": true
-		}
+		},
+		"explorerExclude.backup": null,
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#769bb4",
+			"activityBar.activeBorder": "#e8d6e1",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#e8d6e1",
+			"activityBarBadge.foreground": "#15202b",
+			"titleBar.activeBackground": "#5783a0",
+			"titleBar.inactiveBackground": "#5783a099",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveForeground": "#e7e7e799",
+			"statusBar.background": "#5783a0",
+			"statusBarItem.hoverBackground": "#769bb4",
+			"statusBar.foreground": "#e7e7e7"
+		},
+		"peacock.remoteColor": "#5783a0"
 	}
 }

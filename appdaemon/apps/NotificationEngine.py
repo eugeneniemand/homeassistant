@@ -1,5 +1,5 @@
 import appdaemon.plugins.hass.hassapi as hass
-import modules.utils as utils
+import modules.utils
 import modules.lights as lights
 import json
 
@@ -8,7 +8,8 @@ class NotificationEngine(hass.Hass):
     def message_builder(self, messageType): 
         return lights.build_message(messageType, self.get_state("light"), self.get_state("timer"))
 
-    def mqtt_message_recieved_event(self, event_name, data, kwargs):        
+    def mqtt_message_recieved_event(self, event_name, data, kwargs):  
+        print(data)      
         payload = json.loads(data["payload"])
         message = ""
         for msg in payload["Messages"]:

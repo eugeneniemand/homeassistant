@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  adt:
+    image: python:3.6-buster
+    container_name: Appdaemon-Test-Framework
+    tty: true
+    volumes:
+      - /home/pi/ha/appdaemon:/appdaemon

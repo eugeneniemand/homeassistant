@@ -1,4 +1,5 @@
-import utils
+import modules.utils as utils
+import random
 
 def get_on_lights(lights):
     lights = { k: lights[k] for k in lights.keys() if not utils.hasNumbers(k) and lights[k]["state"] == "on"}
@@ -12,6 +13,10 @@ def get_lights_without_timers(lights, timers):
     l = get_on_lights(lights)
     t = get_idle_timers(timers)
     return utils.intersect(l,t)
+
+def get_random_light(lights):
+    key = random.choice(list(lights))
+    return key 
 
 def build_message(messageType, light_states, timer_states):
     if messageType != "LightsInfo" and messageType != "LightsCount":
