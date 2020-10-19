@@ -142,5 +142,7 @@ devices:
     friendly_name: toilet_window
     retain: false
   '0x00158d0004142fef':
-    friendly_name: 'entrance_motion'
+    friendly_name: entrance_motion
     retain: false
+  '0x00124b0018e1a28a':
+    friendly_name: '0x00124b0018e1a28a'

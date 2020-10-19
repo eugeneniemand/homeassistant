@@ -8,6 +8,9 @@ condition:
 - condition: state
   entity_id: input_boolean.is_bedtime
   state: 'on'
+- condition: state
+  entity_id: binary_sensor.night
+  state: 'on'
 action:
 - delay: "00:{{ '{:02}'.format(range(1,10) | random | int) }}:00"
 - data_template:

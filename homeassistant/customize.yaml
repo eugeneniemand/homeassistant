@@ -12,3 +12,11 @@ group.home_random_lights:
   hidden: true
 group.away_random_lights:
   hidden: true
+switch.plug_2:
+  friendly_name: Lounge TV
+sensor.plug_2_current:
+  friendly_name: Lounge TV Current
+sensor.plug_2_voltage:
+  friendly_name: Lounge TV Voltage
+sensor.plug_2_energy:
+  friendly_name: Lounge TV Watts

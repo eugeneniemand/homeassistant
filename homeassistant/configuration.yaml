@@ -8,6 +8,12 @@ homeassistant:
   latitude: 51.609286097686514
   longitude: 0.5274361874258462
   elevation: 15
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+        - 172.17.0.0/24
     
 ios:
 python_script:
@@ -105,7 +111,7 @@ apple_tv:
     name: Bedroom ATV
 
 apple_tv_mrp:
-  - host: 192.168.1.14
+  - host: 192.168.1.247
     port: 49152
     name: Lounge Apple TV
 

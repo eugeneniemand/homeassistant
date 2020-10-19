@@ -2,3 +2,4 @@ homeassistant/www/community/**
 homeassistant/tmp/**
 *.pyc
 **/.vscode/**
+*.gz
