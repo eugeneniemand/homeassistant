@@ -1,0 +1,103 @@
+version: '3.7'
+services:
+  mqtt:
+    image: pascaldevink/rpi-mosquitto
+    container_name: mqtt
+    restart: always
+    tty: true
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt:latest
+    container_name: zigbee2mqtt
+    restart: always
+    volumes:
+      - /home/pi/ha/zigbee2mqtt:/app/data
+    devices:
+      - "/dev/ttyACM0"
+    depends_on:
+      - mqtt
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
+  netdaemon:
+    image: netdaemon/netdaemon
+    container_name: netdaemon
+    restart: always
+    environment:
+      - HOMEASSISTANT__HOST=192.168.1.3
+      - HOMEASSISTANT__TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiOTQzYzlkZGNjOTI0MTMwYmE3NjcxZWZlMmQxNTYwZCIsImlhdCI6MTYwMzEzOTc4NywiZXhwIjoxOTE4NDk5Nzg3fQ.vynWEdyytvLHwh_UeUcS5tex20l9dMexWlnwVM06BCY
+      - NETDAEMON__GENERATEENTITIES=False
+      - LOGGING__MINIMUMLEVEL=info
+      - TZ='Etc/UTC'
+    ports:
+      - 1337:1337
+    volumes:
+      - /home/pi/ha/netdaemon:/data
+    depends_on:
+      - home-assistant
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
+  home-assistant:
+    image: homeassistant/raspberrypi4-homeassistant:stable
+    container_name: home-assistant
+    init: true
+    network_mode: "host"
+    restart: always
+    volumes:
+      - /home/pi/ha/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      TZ: 'Etc/UTC'
+    depends_on:
+      - mqtt
+      - zigbee2mqtt
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5mb"
+        max-file: "1"
+
+  ha-dockermon:
+    image: philhawthorne/ha-dockermon:arm
+    container_name: ha-dockermon
+    ports:
+      - "8126:8126"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /path/to/config:/config
+
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+    environment:
+      TZ: 'Etc/UTC'
+      WEBPASSWORD: 'S!lv3r'
+    # Volumes store your data between container upgrades
+    volumes:
+       - '/home/pi/pihole/etc-pihole/:/etc/pihole/'
+       - '/home/pi/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+    # Recommended but not required (DHCP needs NET_ADMIN)
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+

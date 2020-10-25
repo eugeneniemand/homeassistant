@@ -1,0 +1,32 @@
+platform: bwalarm
+panic_code: "999"
+warning: switch.alarm_beep_infinate
+alarm: switch.siren
+enable_persistence: true
+enable_night_mode: true
+ignore_open_sensors: true
+states:
+  armed_away:
+    immediate:
+      - binary_sensor.hallway
+      - binary_sensor.lounge
+      - binary_sensor.dining
+      - binary_sensor.kitchen
+      - binary_sensor.study
+      - binary_sensor.landing
+      - binary_sensor.front_door
+      - binary_sensor.back_door
+  armed_home:
+    delayed:
+      - binary_sensor.front_door
+      - binary_sensor.back_door
+    warning_time: 60
+  armed_night:
+    immediate:
+      - binary_sensor.lounge
+      - binary_sensor.dining
+      - binary_sensor.kitchen
+      - binary_sensor.study
+      - binary_sensor.front_door
+      - binary_sensor.back_door
+

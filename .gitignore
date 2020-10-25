@@ -1,5 +1,11 @@
 homeassistant/www/community/**
 homeassistant/tmp/**
+homeassistant_old/**
+homeassistant/custom_components/**
 *.pyc
 **/.vscode/**
 *.gz
+homeassistant/.storage/**
+homeassistant/.cloud/**
+homeassistant/image/**
+homeassistant/home-assistant_v2.db

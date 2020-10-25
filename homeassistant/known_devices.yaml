@@ -1,0 +1,21 @@
+
+host_two:
+  name: host_two
+  mac:
+  icon:
+  picture:
+  track: true
+
+hailey_iphone_ip:
+  name: hailey_iphone_ip
+  mac:
+  icon:
+  picture:
+  track: true
+
+eugene_iphone_ip:
+  name: eugene_iphone_ip
+  mac:
+  icon:
+  picture:
+  track: true

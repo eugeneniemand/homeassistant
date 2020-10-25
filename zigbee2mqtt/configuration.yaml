@@ -13,13 +13,13 @@ groups:
       - '0x000d6ffffe4c0abb'
       - '0x000d6ffffe4c2e50'
       - '0x000d6ffffe62eaf8'
+      - '0x000d6ffffe62f426'
   '2':
     friendly_name: bathroom_group
     devices:
       - '0x000d6ffffe4b2b06'
       - '0x000d6ffffe4b5c14'
       - '0x000d6ffffe5d5a23'
-      - '0x000d6ffffe62f426'
 advanced:
   channel: 15
   log_level: info
@@ -72,6 +72,9 @@ devices:
   '0x000d6ffffe4c2e50':
     friendly_name: dining4_light
     retain: false
+  '0x000d6ffffe62f426':
+    friendly_name: dining5_light
+    retain: false
   '0x000b3cfffef29ff9':
     friendly_name: landing_light
     retain: false
@@ -98,9 +101,6 @@ devices:
     retain: false
   '0x000d6ffffe4b2b06':
     friendly_name: bathroom3_light
-    retain: false
-  '0x000d6ffffe62f426':
-    friendly_name: bathroom4_light
     retain: false
   '0x000d6ffffe03bcad':
     friendly_name: jayden_light

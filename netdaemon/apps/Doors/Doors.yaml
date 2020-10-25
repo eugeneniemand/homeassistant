@@ -1,0 +1,6 @@
+doors_main:
+  class: Twinstead.Doors
+chime:
+  class: Twinstead.Chime
+  dependencies:
+    - doors_main
