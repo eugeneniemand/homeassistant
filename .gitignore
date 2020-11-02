@@ -9,3 +9,6 @@ homeassistant/.storage/**
 homeassistant/.cloud/**
 homeassistant/image/**
 homeassistant/home-assistant_v2.db
+*.mp3
+**/bwalarm_log.json
+homeassistant/home-assistant.log

@@ -15,7 +15,7 @@ groups:
       - '0x000d6ffffe62eaf8'
       - '0x000d6ffffe62f426'
   '2':
-    friendly_name: bathroom_group
+    friendly_name: study_group
     devices:
       - '0x000d6ffffe4b2b06'
       - '0x000d6ffffe4b5c14'
@@ -94,13 +94,13 @@ devices:
     friendly_name: aaron_light
     retain: false
   '0x000d6ffffe5d5a23':
-    friendly_name: bathroom1_light
+    friendly_name: study1_light
     retain: false
   '0x000d6ffffe4b5c14':
-    friendly_name: bathroom2_light
+    friendly_name: study2_light
     retain: false
   '0x000d6ffffe4b2b06':
-    friendly_name: bathroom3_light
+    friendly_name: study3_light
     retain: false
   '0x000d6ffffe03bcad':
     friendly_name: jayden_light

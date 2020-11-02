@@ -69,15 +69,15 @@
 #   color_temp: false
 #   qos: 2
 #   optimistic: false
-# - platform: mqtt
-#   name: "Floor"
-#   schema: json
-#   command_topic: "zigbee2mqtt/floor_light/set"
-#   state_topic: "zigbee2mqtt/floor_light"
-#   brightness: true
-#   color_temp: false
-#   qos: 2
-#   optimistic: false
+- platform: mqtt
+  name: "Floor"
+  schema: json
+  command_topic: "zigbee2mqtt/floor_light/set"
+  state_topic: "zigbee2mqtt/floor_light"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
 # - platform: mqtt
 #   name: "Landing"
 #   schema: json
@@ -105,42 +105,42 @@
   color_temp: true
   qos: 2
   optimistic: false
-# - platform: mqtt
-#   name: "Bathroom"
-#   schema: json
-#   command_topic: "zigbee2mqtt/bathroom_group/set"
-#   state_topic: "zigbee2mqtt/bathroom_group"
-#   brightness: true
-#   color_temp: true
-#   qos: 2
-#   optimistic: false
-# - platform: mqtt
-#   name: "Bathroom1"
-#   schema: json
-#   command_topic: "zigbee2mqtt/bathroom1_light/set"
-#   state_topic: "zigbee2mqtt/bathroom1_light"
-#   brightness: true
-#   color_temp: true
-#   qos: 2
-#   optimistic: false
-# - platform: mqtt
-#   name: "Bathroom2"
-#   schema: json
-#   command_topic: "zigbee2mqtt/bathroom2_light/set"
-#   state_topic: "zigbee2mqtt/bathroom2_light"
-#   brightness: true
-#   color_temp: true
-#   qos: 2
-#   optimistic: false
-# - platform: mqtt
-#   name: "Bathroom3"
-#   schema: json
-#   command_topic: "zigbee2mqtt/bathroom3_light/set"
-#   state_topic: "zigbee2mqtt/bathroom3_light"
-#   brightness: true
-#   color_temp: true
-#   qos: 2
-#   optimistic: false
+- platform: mqtt
+  name: "Study"
+  schema: json
+  command_topic: "zigbee2mqtt/study_group/set"
+  state_topic: "zigbee2mqtt/study_group"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Study1"
+  schema: json
+  command_topic: "zigbee2mqtt/study1_light/set"
+  state_topic: "zigbee2mqtt/study1_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Study2"
+  schema: json
+  command_topic: "zigbee2mqtt/study2_light/set"
+  state_topic: "zigbee2mqtt/study2_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Study3"
+  schema: json
+  command_topic: "zigbee2mqtt/study3_light/set"
+  state_topic: "zigbee2mqtt/study3_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
 - platform: mqtt
   name: "Jayden"
   schema: json

@@ -1,0 +1,3 @@
+alaram_panic:
+  initial: off
+  icon: mdi:alarm-bell

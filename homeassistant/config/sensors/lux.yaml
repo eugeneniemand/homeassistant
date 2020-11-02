@@ -1,0 +1,72 @@
+- platform: mqtt
+  name: Toilet Lux
+  state_topic: "zigbee2mqtt/toilet_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Entrance Lux
+  state_topic: "zigbee2mqtt/entrance_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Lounge Lux
+  state_topic: "zigbee2mqtt/lounge_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Dining Lux
+  state_topic: "zigbee2mqtt/dining_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Kitchen Lux
+  state_topic: "zigbee2mqtt/kitchen_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Utility Lux
+  state_topic: "zigbee2mqtt/utility_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Landing Lux
+  state_topic: "zigbee2mqtt/landing_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Bathroom Lux
+  state_topic: "zigbee2mqtt/bathroom_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Master Lux
+  state_topic: "zigbee2mqtt/master_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Boys Lux
+  state_topic: "zigbee2mqtt/jayden_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Aaron Lux
+  state_topic: "zigbee2mqtt/aaron_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
+- platform: mqtt
+  name: Office Lux
+  state_topic: "zigbee2mqtt/office_motion"
+  value_template: "{{ value_json.illuminance }}"
+  unit_of_measurement: lux
+  device_class: illuminance
