@@ -767,3 +767,7 @@ errorCode: NoError
 2020-11-17 12:26:22 WARNING (MainThread) [homeassistant.config_entries] Config entry for accuweather not ready yet. Retrying in 80 seconds
 2020-11-17 12:27:43 ERROR (MainThread) [homeassistant.components.accuweather] Error fetching accuweather data: The allowed number of requests has been exceeded
 2020-11-17 12:27:43 WARNING (MainThread) [homeassistant.config_entries] Config entry for accuweather not ready yet. Retrying in 80 seconds
+2020-11-17 12:29:03 ERROR (MainThread) [homeassistant.components.accuweather] Error fetching accuweather data: The allowed number of requests has been exceeded
+2020-11-17 12:29:03 WARNING (MainThread) [homeassistant.config_entries] Config entry for accuweather not ready yet. Retrying in 80 seconds
+2020-11-17 12:30:23 ERROR (MainThread) [homeassistant.components.accuweather] Error fetching accuweather data: The allowed number of requests has been exceeded
+2020-11-17 12:30:23 WARNING (MainThread) [homeassistant.config_entries] Config entry for accuweather not ready yet. Retrying in 80 seconds
