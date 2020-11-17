@@ -14,7 +14,7 @@ homeassistant:
       trusted_networks:
         - 192.168.1.0/24
         - 172.17.0.0/24
-    
+
 ios:
 python_script:
 
@@ -78,7 +78,7 @@ tts:
   - platform: google_translate
     service_name: google_say
 
-cloud: 
+cloud:
 mobile_app:
 # Cloud
 automation: !include_dir_list config/automations/
@@ -187,3 +187,4 @@ shell_command:
   restart_zigbee2mqtt: 'curl http://127.0.0.1:8126/container/zigbee2mqtt/restart'
 
 circadian_lighting:
+

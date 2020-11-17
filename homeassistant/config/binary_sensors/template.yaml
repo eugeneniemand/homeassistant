@@ -2,17 +2,17 @@
   sensors:
     dining_bright:
       friendly_name: Dining Bright
-      value_template: '{{ states.sensor.dining_lux.state | int >= states.input_number.dining_lux_limit.state | int }}'
+      value_template: '{{ states.sensor.dining_lux.state | int >= states.input_number.dining_lux_limit.state | int or states.sensor.dining_lux.state == "unknown"}}'
 - platform: template
   sensors:
     lounge_bright:
       friendly_name: Lounge Bright
-      value_template: '{{ states.sensor.lounge_lux.state | int >= states.input_number.lounge_lux_limit.state | int }}'
+      value_template: '{{ states.sensor.lounge_lux.state | int >= states.input_number.lounge_lux_limit.state | int or states.sensor.lounge_lux.state == "unknown" }}'
 - platform: template
   sensors:
     office_bright:
       friendly_name: Office Bright
-      value_template: '{{ states.sensor.office_lux.state | int >= states.input_number.office_lux_limit.state | int }}'
+      value_template: '{{ states.sensor.office_lux.state | int >= states.input_number.office_lux_limit.state | int or states.sensor.office_lux.state == "unknown" }}'
 - platform: template
   sensors:
     eugene_laptop_in_use:

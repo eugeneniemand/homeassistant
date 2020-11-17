@@ -86,7 +86,6 @@ entity_controller:
   lounge_back_light:
     sensor:
       - binary_sensor.lounge_motion
-      - media_player.living_room
     entity: light.lounge_back
     delay: 600
     block_timeout: 1800
@@ -108,6 +107,13 @@ entity_controller:
       - binary_sensor.dining_bright
 
 logger:
+  default: warning
   logs:
     pyatv: debug
     custom_components.apple_tv: debug
+
+switch broadlink:
+  - platform: broadlink
+    mac: '78:0f:77:d9:2b:62'
+    switches:
+      !include_dir_merge_list config/broadlink
