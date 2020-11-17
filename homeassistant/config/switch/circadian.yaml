@@ -1,0 +1,6 @@
+- platform: circadian_lighting
+  lights_ct:
+    - light.lounge
+    - light.dining
+    - light.study
+    - light.floor

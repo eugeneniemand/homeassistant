@@ -20,6 +20,25 @@ groups:
       - '0x000d6ffffe4b2b06'
       - '0x000d6ffffe4b5c14'
       - '0x000d6ffffe5d5a23'
+  '3':
+    friendly_name: lounge_group
+    devices:
+      - '0x000d6ffffe03a9c8'
+      - '0x000d6ffffe12ba7a'
+  '4':
+    friendly_name: downstairs_group
+    devices:
+      - '0x000d6ffffe4b2431'
+      - '0x000d6ffffe4c0abb'
+      - '0x000d6ffffe4c2e50'
+      - '0x000d6ffffe62eaf8'
+      - '0x000d6ffffe62f426'
+      - '0x000d6ffffe4b2b06'
+      - '0x000d6ffffe4b5c14'
+      - '0x000d6ffffe5d5a23'
+      - '0x000d6ffffe03a9c8'
+      - '0x000d6ffffe12ba7a'
+      - '0x000d6ffffe016c9f'
 advanced:
   channel: 15
   log_level: info
@@ -106,10 +125,10 @@ devices:
     friendly_name: jayden_light
     retain: false
   '0x000d6ffffe12ba7a':
-    friendly_name: office_light
+    friendly_name: lounge_front_light
     retain: false
   '0x000d6ffffe03a9c8':
-    friendly_name: master_light
+    friendly_name: lounge_back_light
     retain: false
   '0x000d6ffffebcc820':
     friendly_name: fish_light
@@ -144,5 +163,5 @@ devices:
   '0x00158d0004142fef':
     friendly_name: entrance_motion
     retain: false
-  '0x00124b0018e1a28a':
-    friendly_name: '0x00124b0018e1a28a'
+  '0x30eb5affff7d88cc':
+    friendly_name: '0x30eb5affff7d88cc'

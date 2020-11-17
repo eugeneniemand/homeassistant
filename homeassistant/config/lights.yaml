@@ -1,11 +1,21 @@
-# - platform: mqtt
-#   name: Toilet
-#   command_topic: "zigbee2mqtt/toilet_light/set"
-#   state_topic: "zigbee2mqtt/toilet_light"
-#   availability_topic: "zigbee2mqtt/bridge/state"
-#   brightness: true
-#   rgb: false
-#   schema: json
+- platform: mqtt
+  name: "Downstairs"
+  schema: json
+  command_topic: "zigbee2mqtt/downstairs_group/set"
+  state_topic: "zigbee2mqtt/downstairs_group"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Lounge"
+  schema: json
+  command_topic: "zigbee2mqtt/lounge_group/set"
+  state_topic: "zigbee2mqtt/lounge_group"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
 - platform: mqtt
   name: "Dining"
   schema: json
@@ -60,42 +70,15 @@
   color_temp: true
   qos: 2
   optimistic: false
-# - platform: mqtt
-#   name: "Porch"
-#   schema: json
-#   command_topic: "zigbee2mqtt/porch_light/set"
-#   state_topic: "zigbee2mqtt/porch_light"
-#   brightness: true
-#   color_temp: false
-#   qos: 2
-#   optimistic: false
 - platform: mqtt
   name: "Floor"
   schema: json
   command_topic: "zigbee2mqtt/floor_light/set"
   state_topic: "zigbee2mqtt/floor_light"
   brightness: true
-  color_temp: false
+  color_temp: true
   qos: 2
   optimistic: false
-# - platform: mqtt
-#   name: "Landing"
-#   schema: json
-#   command_topic: "zigbee2mqtt/landing_light/set"
-#   state_topic: "zigbee2mqtt/landing_light"
-#   brightness: true
-#   color_temp: false
-#   qos: 2
-#   optimistic: false
-# - platform: mqtt
-#   name: "Utility"
-#   schema: json
-#   command_topic: "zigbee2mqtt/utility_light/set"
-#   state_topic: "zigbee2mqtt/utility_light"
-#   brightness: true
-#   color_temp: true
-#   qos: 2
-#   optimistic: false
 - platform: mqtt
   name: "Aaron"
   schema: json
@@ -151,20 +134,58 @@
   qos: 2
   optimistic: false
 - platform: mqtt
-  name: "Office"
+  name: "Lounge Front"
   schema: json
-  command_topic: "zigbee2mqtt/office_light/set"
-  state_topic: "zigbee2mqtt/office_light"
+  command_topic: "zigbee2mqtt/lounge_front_light/set"
+  state_topic: "zigbee2mqtt/lounge_front_light"
   brightness: true
   color_temp: true
   qos: 2
   optimistic: false
 - platform: mqtt
-  name: "Master"
+  name: "Lounge Back"
   schema: json
-  command_topic: "zigbee2mqtt/master_light/set"
-  state_topic: "zigbee2mqtt/master_light"
+  command_topic: "zigbee2mqtt/lounge_back_light/set"
+  state_topic: "zigbee2mqtt/lounge_back_light"
   brightness: true
   color_temp: true
+  qos: 2
+  optimistic: false
+
+
+- platform: mqtt
+  name: Toilet
+  command_topic: "zigbee2mqtt/toilet_light/set"
+  state_topic: "zigbee2mqtt/toilet_light"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  brightness: true
+  rgb: false
+  schema: json
+- platform: mqtt
+  name: "Landing"
+  schema: json
+  command_topic: "zigbee2mqtt/landing_light/set"
+  state_topic: "zigbee2mqtt/landing_light"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Utility"
+  schema: json
+  command_topic: "zigbee2mqtt/utility_light/set"
+  state_topic: "zigbee2mqtt/utility_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+
+- platform: mqtt
+  name: "Porch"
+  schema: json
+  command_topic: "zigbee2mqtt/porch_light/set"
+  state_topic: "zigbee2mqtt/porch_light"
+  brightness: true
+  color_temp: false
   qos: 2
   optimistic: false
