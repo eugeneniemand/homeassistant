@@ -1,0 +1,3 @@
+.gitattributes !filter !diff
+homeassistant/secrets.yaml filter=git-crypt diff=git-crypt
+homeassistant/.storage/** filter=git-crypt diff=git-crypt

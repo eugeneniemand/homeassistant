@@ -1,553 +1,289 @@
-2020-10-24 13:49:57 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-10-24 13:49:57 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-10-24 13:49:57 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for wiser which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-10-24 13:50:02 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for bwalarm which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-10-24 13:50:03 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for iphonedetect which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
-2020-10-24 13:50:04 WARNING (MainThread) [homeassistant.components.switch] SwitchDevice is deprecated, modify WiserSwitch to extend SwitchEntity
-2020-10-24 13:50:04 WARNING (MainThread) [homeassistant.components.switch] SwitchDevice is deprecated, modify WiserSmartPlug to extend SwitchEntity
-2020-10-24 13:50:04 WARNING (MainThread) [homeassistant.components.climate] ClimateDevice is deprecated, modify WiserRoom to extend ClimateEntity
-2020-10-24 13:50:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 13:51:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 13:51:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 13:59:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 13:59:15 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:00:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:01:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:01:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:01:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 14:03:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:03:15 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:06:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:06:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:08:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:08:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:19:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:19:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:20:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:26:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:26:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:29:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:29:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:30:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:36:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 14:42:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:42:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:43:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:43:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 14:44:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 14:48:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:48:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:49:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:50:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:50:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:52:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:52:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:53:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:55:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 14:55:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 14:56:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 15:09:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 15:09:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 15:37:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 15:37:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 15:37:29 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 15:41:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 15:55:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 16:06:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 16:22:43 WARNING (zeroconf-ServiceBrowser__wled._tcp.local.-_elg._tcp.local.-_printer._tcp.local.-_spotify-connect._tcp.local.-_Volumio._tcp.local.-_googlecast._tcp.local.-_ipp._tcp.local.-_hap._tcp.local.-_esphomelib._tcp.local.-_api._udp.local.-_bond._tcp.local.-_xbmc-jsonrpc-h._tcp.local.-_nut._tcp.local.-_http._tcp.local.-_plugwise._tcp.local.-_homekit._tcp.local.-_viziocast._tcp.local.-_axis-video._tcp.local.-_ipps._tcp.local.-_dkapi._tcp.local.-_ssh._tcp.local.-_daap._tcp.local.-_miio._udp.local._309) [zeroconf] Error sending through socket 22
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for wiser which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for circadian_lighting which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for apple_tv which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for entity_controller which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:53 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for bwalarm which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:56 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for iphonedetect which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant.
+2020-11-16 20:37:57 WARNING (MainThread) [homeassistant.components.switch] SwitchDevice is deprecated, modify WiserSwitch to extend SwitchEntity
+2020-11-16 20:37:57 WARNING (MainThread) [homeassistant.components.switch] SwitchDevice is deprecated, modify WiserSmartPlug to extend SwitchEntity
+2020-11-16 20:37:57 WARNING (MainThread) [homeassistant.components.climate] ClimateDevice is deprecated, modify WiserRoom to extend ClimateEntity
+2020-11-16 20:37:58 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.itv.itvplayer
+2020-11-16 20:37:58 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.bskyb.nowtv.appletv
+2020-11-16 20:37:58 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player uk.co.bbc.iplayer
+2020-11-16 20:37:59 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-11-16 20:37:59 ERROR (MainThread) [custom_components.entity_controller.lounge_front_light] Configuration error! State Entity ('NoneType' object has no attribute 'state') does not exist. Please check for spelling and typos.
+2020-11-16 20:37:59 ERROR (MainThread) [custom_components.entity_controller.lounge_back_light] Configuration error! State Entity ('NoneType' object has no attribute 'state') does not exist. Please check for spelling and typos.
+2020-11-16 20:38:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
+2020-11-16 20:38:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 20:58:41 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.2770515736] Pause failed: SendError=ApplicationNotFound, HandlerReturnStatus=Success
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/zeroconf/__init__.py", line 2889, in send
-    bytes_sent = s.sendto(packet, 0, (real_addr, port))
-OSError: [Errno 22] Invalid argument
-2020-10-24 16:27:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 16:48:39 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 16:52:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 16:52:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 17:01:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:01:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:02:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:12:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:12:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 17:13:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:15:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:15:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 17:17:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:17:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 17:20:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:20:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:23:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:23:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:26:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:30:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:30:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 17:31:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 17:31:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:31:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:32:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:32:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:34:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:34:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:35:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:35:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:36:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 17:39:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:39:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:40:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:42:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:42:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:44:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:44:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:45:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 17:45:16 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-24 17:45:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:46:12 ERROR (MainThread) [homeassistant.helpers.entity] Update for camera.johan_front_door fails
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 135, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1448, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1483, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_component.py", line 204, in handle_service
+    await self.hass.helpers.service.entity_service_call(
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 482, in entity_service_call
+    future.result()  # pop exception if have
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 664, in async_request_call
+    await coro
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 519, in _handle_entity_call
+    await result
+  File "/config/custom_components/apple_tv/media_player.py", line 269, in async_media_play_pause
+    await self.atv.remote_control.pause()
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 212, in pause
+    await self._send_command(CommandInfo_pb2.Pause)
+  File "/usr/local/lib/python3.8/site-packages/pyatv/mrp/__init__.py", line 170, in _send_command
+    raise exceptions.CommandError(
+pyatv.exceptions.CommandError: Pause failed: SendError=ApplicationNotFound, HandlerReturnStatus=Success
+2020-11-16 20:58:53 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.itv.itvplayer
+2020-11-16 20:58:53 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.bskyb.nowtv.appletv
+2020-11-16 20:58:53 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player uk.co.bbc.iplayer
+2020-11-16 20:58:53 WARNING (MainThread) [pyatv.mrp.player_state] Received UpdateClientMessage for unknown player com.apple.TVAirPlay
+2020-11-16 21:01:34 ERROR (MainThread) [homeassistant.helpers.event] Error while processing state changed for media_player.living_room
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/event.py", line 258, in _async_state_change_dispatcher
+    hass.async_run_hass_job(job, event)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 434, in async_run_hass_job
+    hassjob.target(*args)
+  File "/usr/src/homeassistant/homeassistant/helpers/event.py", line 199, in state_change_listener
+    hass.async_run_hass_job(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 434, in async_run_hass_job
+    hassjob.target(*args)
+  File "/config/custom_components/entity_controller/__init__.py", line 540, in sensor_state_change
+    self.log.debug("sensor_state_change :: %10s Sensor state change to: %s" % ( pprint.pformat(entity), new.state))
+AttributeError: 'NoneType' object has no attribute 'state'
+2020-11-16 21:01:34 ERROR (MainThread) [homeassistant.helpers.event] Error while processing state changed for media_player.living_room
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/event.py", line 258, in _async_state_change_dispatcher
+    hass.async_run_hass_job(job, event)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 434, in async_run_hass_job
+    hassjob.target(*args)
+  File "/usr/src/homeassistant/homeassistant/helpers/event.py", line 199, in state_change_listener
+    hass.async_run_hass_job(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 434, in async_run_hass_job
+    hassjob.target(*args)
+  File "/config/custom_components/entity_controller/__init__.py", line 540, in sensor_state_change
+    self.log.debug("sensor_state_change :: %10s Sensor state change to: %s" % ( pprint.pformat(entity), new.state))
+AttributeError: 'NoneType' object has no attribute 'state'
+2020-11-16 21:01:34 ERROR (MainThread) [homeassistant.components.media_player] Platform apple_tv does not generate unique IDs. ID mp_444C4565-7251-4E47-8E2B-CB9244FBF47F already exists - ignoring media_player.living_room
+2020-11-16 21:18:23 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:18:59 WARNING (SyncWorker_21) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
+2020-11-16 21:19:59 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/ring_devices?api_version=9
+2020-11-16 21:21:48 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:24:59 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/ring_devices?api_version=9
+2020-11-16 21:25:58 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:26:59 WARNING (SyncWorker_50) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1aa01e6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/29555823/history?api_version=9&limit=10
+2020-11-16 21:28:43 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:28:59 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/ring_devices?api_version=9
+2020-11-16 21:29:03 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:29:23 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:29:53 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:30:03 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:30:23 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:30:33 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:30:53 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:30:59 WARNING (SyncWorker_17) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
+2020-11-16 21:31:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 21:31:09 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 21:31:13 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:31:18 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:31:33 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:31:48 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:31:59 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/ring_devices?api_version=9
+2020-11-16 21:31:59 WARNING (SyncWorker_16) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
+2020-11-16 21:32:08 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:32:23 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:32:38 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:32:43 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:32:48 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:32:59 WARNING (SyncWorker_12) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
+2020-11-16 21:32:59 WARNING (SyncWorker_12) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1aa01e6: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/29555823/history?api_version=9&limit=10
+2020-11-16 21:32:59 WARNING (SyncWorker_12) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a11d2411: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/doorbots/21044527/history?api_version=9&limit=10
+2020-11-16 21:33:03 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 21:33:18 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: 503 Server Error: Service Temporarily Unavailable for url: https://api.ring.com/clients_api/dings/active?api_version=9
+2020-11-16 22:17:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:04:00 WARNING (SyncWorker_50) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1aa01e6: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/doorbots/29555823/history?api_version=9&limit=10
+2020-11-16 23:06:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:06:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:07:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:09:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:09:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:11:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:11:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:12:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:12:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:13:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:13:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:18:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:20:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:20:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:25:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:25:10 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:26:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:38:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
+2020-11-16 23:44:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:44:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:48:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:48:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:56:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-16 23:56:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-16 23:57:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 00:43:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 00:53:57 ERROR (MainThread) [homeassistant.components.accuweather] Error fetching accuweather data: The allowed number of requests has been exceeded
+2020-11-17 01:20:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
+2020-11-17 01:20:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
+2020-11-17 01:29:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 02:01:36 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
+2020-11-17 02:14:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 02:38:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
+2020-11-17 02:39:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
+2020-11-17 02:39:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
+2020-11-17 02:55:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 02:55:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 02:56:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:04:01 WARNING (SyncWorker_27) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
+2020-11-17 03:08:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:08:11 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:22:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:22:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:23:10 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
+2020-11-17 03:23:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:23:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:25:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:25:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:29:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:29:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:36:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:36:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:40:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:40:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:43:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:43:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:46:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:46:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:48:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:48:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 03:49:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:55:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 03:55:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 04:00:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 04:00:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 04:07:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 04:07:12 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 04:08:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 04:39:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
+2020-11-17 04:39:13 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
+2020-11-17 05:15:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 05:15:13 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
+2020-11-17 05:16:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 05:38:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
+2020-11-17 06:01:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
+2020-11-17 06:30:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
+2020-11-17 06:30:13 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
+2020-11-17 06:49:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_main_ratio fails
 Traceback (most recent call last):
   File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
     await self.async_device_update()
-  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 469, in async_device_update
-    await self.async_update()  # type: ignore
-  File "/usr/src/homeassistant/homeassistant/components/ring/camera.py", line 151, in async_update
-    video_url = await self.hass.async_add_executor_job(
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
   File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "/usr/local/lib/python3.8/site-packages/ring_doorbell/doorbot.py", line 354, in recording_url
-    req = self._ring.query(url)
-  File "/usr/local/lib/python3.8/site-packages/ring_doorbell/__init__.py", line 95, in query
-    return self.auth.query(
-  File "/usr/local/lib/python3.8/site-packages/ring_doorbell/auth.py", line 89, in query
-    req.raise_for_status()
-  File "/usr/local/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.ring.com/clients_api/dings/6887243941956222063/recording?api_version=9
-2020-10-24 17:48:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 17:48:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 17:48:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 17:54:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:54:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:57:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:57:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 17:58:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:59:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 17:59:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:06:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:06:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:13:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:13:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:16:23 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-24 18:17:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:17:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:23:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:23:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:25:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:25:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:29:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:29:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:32:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:32:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:35:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:35:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:43:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:43:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:44:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:46:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:46:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 18:48:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 18:48:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:03:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:03:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:07:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:07:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:22:13 WARNING (MainThread) [aiohttp.websocket] websocket connection is closing.
-2020-10-24 19:24:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:24:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:25:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:32:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:32:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:33:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:33:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:34:40 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 19:35:10 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 19:35:40 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 19:36:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:36:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:37:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:37:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:37:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:37:40 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 19:38:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:38:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:39:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:39:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:40:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:40:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:41:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:41:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:41:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:41:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:42:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:42:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:42:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:43:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:43:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:43:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:43:38 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:44:08 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 19:45:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:45:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:46:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:46:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:47:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-24 19:47:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-24 19:47:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:51:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:51:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:53:10 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 19:55:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:55:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:56:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:56:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 19:57:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 19:57:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 20:02:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 20:02:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 20:08:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 20:08:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 20:09:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 20:48:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 20:49:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 20:49:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 20:51:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 20:51:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-24 20:53:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 20:53:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-24 20:54:06 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/ring_devices?api_version=9
-2020-10-24 20:54:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 21:11:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 21:11:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 21:17:07 WARNING (SyncWorker_11) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-24 21:27:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 21:29:41 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 21:35:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 21:35:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 21:36:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 21:36:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-24 21:37:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 21:37:17 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-24 21:37:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 21:37:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-24 21:39:10 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-24 22:24:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-24 22:24:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-24 22:51:41 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 22:59:11 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-24 23:09:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 00:19:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 00:19:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 00:20:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 00:26:11 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 00:35:08 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-25 00:38:11 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 00:39:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 00:39:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 00:39:42 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 00:40:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 00:40:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 00:41:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 00:41:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 00:43:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 00:43:18 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 01:05:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 01:48:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 01:55:12 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 02:24:12 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 02:57:12 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 03:11:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 03:18:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 04:03:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 04:03:19 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 04:05:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 04:35:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 04:37:13 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 04:37:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 04:37:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 04:38:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 04:42:12 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 04:46:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 04:46:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 04:47:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 04:49:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 04:50:15 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 04:54:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 04:54:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 04:55:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 04:55:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 04:56:42 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 05:00:46 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 05:02:12 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 05:11:45 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 05:14:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 05:17:42 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 05:25:13 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 05:38:14 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 05:39:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 05:45:44 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 06:22:46 WARNING (MainThread) [aiohttp.websocket] websocket connection is closing.
-2020-10-25 06:22:50 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 06:26:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 06:29:13 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 06:31:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 06:31:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 06:31:43 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 06:33:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 06:33:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 06:34:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 06:54:10 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/ring_devices?api_version=9
-2020-10-25 06:54:11 WARNING (SyncWorker_13) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
-2020-10-25 07:24:13 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 07:25:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:28:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:28:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:37:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-25 07:37:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-25 07:37:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.159 (192.168.1.159) (Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Home Assistant/2020.6.2 (io.robbie.HomeAssistant; build:1; iOS 14.1.0))
-2020-10-25 07:37:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:37:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:39:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:39:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:45:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:45:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:47:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:47:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:47:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 07:51:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:51:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:54:11 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-25 07:55:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:55:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 07:57:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 07:57:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:00:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:00:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:06:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:06:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:07:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:08:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:08:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:09:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:16:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:16:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:20:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:20:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:33:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 08:54:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:54:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:55:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 08:55:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 08:56:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 09:02:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 09:02:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 09:03:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 09:11:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 09:11:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 09:12:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 09:17:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 09:23:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 09:23:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 10:03:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 10:06:06 ERROR (MainThread) [homeassistant.components.accuweather] Error fetching accuweather data: The allowed number of requests has been exceeded
-2020-10-25 10:48:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 10:51:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 10:51:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 11:17:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 11:17:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 11:18:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 11:23:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 11:23:21 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 11:42:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 11:42:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 11:47:46 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 11:57:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 11:57:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 11:59:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 11:59:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:00:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:01:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:01:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:02:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:02:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:04:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:04:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:04:38 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2020-10-25 12:05:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:07:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:07:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:08:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:11:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 12:11:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 12:12:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 12:44:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:44:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:45:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:45:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:46:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:46:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:46:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:46:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:48:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:48:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:49:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:49:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:49:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:49:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:50:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 12:50:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 12:51:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:51:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:53:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:53:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:54:11 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring device data: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/ring_devices?api_version=9
-2020-10-25 12:54:11 WARNING (SyncWorker_11) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/doorbots/52497214/history?api_version=9&limit=10
-2020-10-25 12:54:12 WARNING (SyncWorker_11) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1aa01e6: 401 Client Error: Unauthorized for url: https://api.ring.com/clients_api/doorbots/29555823/history?api_version=9&limit=10
-2020-10-25 12:55:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:55:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:57:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 12:58:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 12:58:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 12:59:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:00:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:00:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:02:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:02:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:04:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:04:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:05:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:06:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:06:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:07:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:08:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:08:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:11:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:11:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:13:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:13:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:14:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:15:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:15:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:17:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:17:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:20:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:20:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:21:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:22:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:22:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:24:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:24:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:27:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:27:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:28:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:28:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 13:28:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 13:29:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:29:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:30:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:31:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:31:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:36:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 13:38:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:38:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:41:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:41:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:43:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:43:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:44:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:45:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:45:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:48:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:48:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:49:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:52:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:52:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:53:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:54:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:54:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 13:57:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 13:57:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 14:02:45 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 14:05:16 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 14:15:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 14:25:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 14:25:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 14:26:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 14:28:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 14:28:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:03:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:03:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:05:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:05:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:08:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:08:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:10:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:10:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:14:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:14:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:19:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:19:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:29:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 15:29:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 15:46:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 15:50:17 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 15:51:23 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 15:52:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 15:52:46 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 15:55:17 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 16:02:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:02:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:04:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:04:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:17:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:17:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:23:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 16:23:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 16:24:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:24:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:25:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:27:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:27:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:28:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:29:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:29:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:30:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:32:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:32:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:34:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:34:22 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 16:35:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 16:43:12 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-25 16:54:46 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 17:08:47 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 17:20:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 17:20:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 17:28:47 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to unknown error
-2020-10-25 17:38:46 ERROR (MainThread) [custom_components.wiser.const] Unable to update from Wiser hub due to timeout error
-2020-10-25 18:04:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 18:04:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 18:43:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 18:43:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 19:37:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 19:45:12 WARNING (SyncWorker_63) [homeassistant.components.ring] Error fetching Ring history data for device 3ce1a1b15dd6: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-25 19:52:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 19:52:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.johan_front_door
-2020-10-25 20:30:13 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2020-10-25 20:34:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 20:34:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 20:36:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.johan_front_door is taking over 10 seconds
-2020-10-25 20:44:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 20:44:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.niemand_front_door
-2020-10-25 20:45:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.niemand_front_door is taking over 10 seconds
-2020-10-25 20:51:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 20:51:24 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 21:02:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 21:02:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
-2020-10-25 21:03:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 21:04:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.front_door is taking over 10 seconds
-2020-10-25 21:04:23 WARNING (MainThread) [homeassistant.components.ring.camera] Time out fetching recording url for camera camera.front_door
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
+2020-11-17 06:49:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_main_count fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
+2020-11-17 06:49:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_addon_ratio fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
+2020-11-17 06:49:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_addon_count fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
+2020-11-17 06:49:45 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_google_ratio fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
+2020-11-17 06:49:45 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.average_ping_konnected_google_count fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 278, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 474, in async_device_update
+    raise exc
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/history_stats/sensor.py", line 224, in update
+    history_list = history.state_changes_during_period(
+  File "/usr/src/homeassistant/homeassistant/components/history/__init__.py", line 169, in state_changes_during_period
+    with session_scope(hass=hass) as session:
+  File "/usr/local/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/usr/src/homeassistant/homeassistant/components/recorder/util.py", line 31, in session_scope
+    session = hass.data[DATA_INSTANCE].get_session()
+TypeError: 'NoneType' object is not callable
