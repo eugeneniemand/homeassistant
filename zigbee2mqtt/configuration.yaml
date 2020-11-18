@@ -68,10 +68,10 @@ devices:
     friendly_name: front_door
     retain: false
   '0x00158d0002ecf038':
-    friendly_name: patio_door
+    friendly_name: dining_door
     retain: false
   '0x00158d0003120b9e':
-    friendly_name: back_door
+    friendly_name: lounge_door
     retain: false
   '0x00158d0002a21b2e':
     friendly_name: fish_vibration
@@ -165,3 +165,6 @@ devices:
     retain: false
   '0x30eb5affff7d88cc':
     friendly_name: '0x30eb5affff7d88cc'
+  '0x00158d000321b0e6':
+    friendly_name: garage_back_door
+    retain: false
