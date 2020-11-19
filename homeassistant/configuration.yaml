@@ -5,6 +5,7 @@ homeassistant:
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
+  initial_state: 'true'
 
 # Text to speech
 tts:
@@ -14,14 +15,15 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-light: !include config/lights.yaml
+light: !include config/lights/lights.yaml
 input_boolean: !include config/inputs/input_booleans.yaml
 input_number: !include config/inputs/input_number.yaml
 sensor: !include_dir_merge_list config/sensors/
 switch: !include_dir_merge_list config/switch/
 binary_sensor: !include_dir_merge_list config/binary_sensors/
+
 alarm_control_panel: !include resources/bwalarm/bwalarm.yaml
-timer: !include config/timers.yaml
+entity_controller: !include config/lights/entitycontroller.yaml
 
 mqtt:
   discovery: true
@@ -54,63 +56,6 @@ telegram_bot:
 circadian_lighting:
   min_colortemp: 1000
   max_colortemp: 10000
-
-entity_controller:
-  office_light:
-    sensor:
-      - binary_sensor.office_motion
-      - binary_sensor.study
-      - binary_sensor.eugene_laptop_in_use
-    entity: light.study
-    delay: 300
-    block_timeout: 1800
-    state_attributes_ignore:
-      - brightness
-      - color_temp
-    overrides:
-      - binary_sensor.office_bright
-
-  lounge_front_light:
-    sensor:
-      - binary_sensor.lounge_motion
-      - media_player.living_room
-    entity: light.lounge_front
-    delay: 600
-    block_timeout: 1800
-    state_attributes_ignore:
-      - brightness
-      - color_temp
-    overrides:
-      - binary_sensor.lounge_bright
-
-  lounge_back_light:
-    sensor:
-      - binary_sensor.lounge_motion
-    entity: light.lounge_back
-    delay: 600
-    block_timeout: 1800
-    state_attributes_ignore:
-      - brightness
-      - color_temp
-    overrides:
-      - binary_sensor.lounge_bright
-
-  dining_light:
-    sensor: binary_sensor.dining_motion
-    entity: light.dining
-    delay: 600
-    block_timeout: 1800
-    state_attributes_ignore:
-      - brightness
-      - color_temp
-    overrides:
-      - binary_sensor.dining_bright
-
-logger:
-  default: warning
-  logs:
-    pyatv: debug
-    custom_components.apple_tv: debug
 
 switch broadlink:
   - platform: broadlink

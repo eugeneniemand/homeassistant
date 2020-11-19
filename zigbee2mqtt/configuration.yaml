@@ -42,6 +42,7 @@ groups:
 advanced:
   channel: 15
   log_level: info
+  last_seen: ISO_8601_local
 devices:
   '0x00158d000313ce7d':
     friendly_name: lounge_motion
