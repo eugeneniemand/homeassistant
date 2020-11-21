@@ -1,0 +1,8 @@
+Christmas:
+  entities:
+    - switch.plug_2
+    - light.floor
+Climate:
+    entities:
+      - climate.wiser_boys
+      - climate.wiser_dining

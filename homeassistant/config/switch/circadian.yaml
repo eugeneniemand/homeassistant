@@ -1,6 +1,19 @@
 - platform: circadian_lighting
+  name: Circadian Lounge
   lights_ct:
     - light.lounge
+
+- platform: circadian_lighting
+  name: Circadian Dining
+  lights_ct:
     - light.dining
+
+- platform: circadian_lighting
+  name: Circadian Study
+  lights_ct:
     - light.study
+
+- platform: circadian_lighting
+  name: Circadian Floor
+  lights_ct:
     - light.floor
