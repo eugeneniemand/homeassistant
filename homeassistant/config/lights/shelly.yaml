@@ -1,0 +1,14 @@
+- platform: mqtt
+  name: Outside Drive
+  state_topic: "shellies/shelly1-2C6D1B/relay/0"
+  command_topic: "shellies/shelly1-2C6D1B/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: Outside Garage
+  state_topic: "shellies/shelly1-554EF2/relay/0"
+  command_topic: "shellies/shelly1-554EF2/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

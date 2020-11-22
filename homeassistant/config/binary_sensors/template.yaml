@@ -27,6 +27,15 @@
 
 - platform: template
   sensors:
+    arron_bright:
+      friendly_name: Arron Bright
+      value_template: '{{ states.sensor.arron_lux.state | int >= states.input_number.arron_lux_limit.state | int or states.sensor.arron_lux.state == "unknown" }}'
+      attribute_templates:
+        lux_limit: '{{ states.input_number.arron_lux_limit.state }}'
+        lux: '{{ states.sensor.arron_lux.state }}'
+
+- platform: template
+  sensors:
     eugene_laptop_in_use:
       friendly_name: Eugene Laptop In Use
       value_template: '{{ states.sensor.asglh_wl_19140_system_idle_time.state | int == 0 }}'

@@ -47,3 +47,14 @@ dining_light:
     - color_temp
   overrides:
     - binary_sensor.dining_bright
+
+arron_light:
+  sensor: binary_sensor.arron_motion
+  entity: light.arron
+  delay: 300
+  block_timeout: 600
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.arron_bright

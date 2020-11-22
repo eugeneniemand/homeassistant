@@ -16,6 +16,8 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 light: !include config/lights/lights.yaml
+light shelly: !include config/lights/shelly.yaml
+light sonoff: !include config/lights/sonoff.yaml
 input_boolean: !include config/inputs/input_booleans.yaml
 input_number: !include config/inputs/input_number.yaml
 sensor: !include_dir_merge_list config/sensors/

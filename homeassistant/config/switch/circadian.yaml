@@ -17,3 +17,8 @@
   name: Circadian Floor
   lights_ct:
     - light.floor
+
+- platform: circadian_lighting
+  name: Circadian Arron
+  lights_ct:
+    - light.arron
