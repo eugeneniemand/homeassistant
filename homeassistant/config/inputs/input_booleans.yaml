@@ -1,3 +1,9 @@
 alaram_panic:
   initial: off
   icon: mdi:alarm-bell
+
+lounge_motion_lights_disabled:
+  icon: mdi:motion-sensor-off
+
+notify_eugene_telegram:
+  initial: on

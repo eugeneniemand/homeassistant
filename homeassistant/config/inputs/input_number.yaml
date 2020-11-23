@@ -13,7 +13,7 @@ office_lux_limit:
   max: 200
   step: 1
 
-arron_lux_limit:
+aaron_lux_limit:
   min: 0
   max: 200
   step: 1

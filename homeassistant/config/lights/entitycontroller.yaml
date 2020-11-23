@@ -24,6 +24,7 @@ lounge_front_light:
     - color_temp
   overrides:
     - binary_sensor.lounge_bright
+    - input_boolean.lounge_motion_lights_disabled
 
 lounge_back_light:
   sensor:
@@ -36,6 +37,7 @@ lounge_back_light:
     - color_temp
   overrides:
     - binary_sensor.lounge_bright
+    - input_boolean.lounge_motion_lights_disabled
 
 dining_light:
   sensor: binary_sensor.dining_motion

@@ -11,22 +11,7 @@ default_config:
 tts:
   - platform: google_translate
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
-light: !include config/lights/lights.yaml
-light shelly: !include config/lights/shelly.yaml
-light sonoff: !include config/lights/sonoff.yaml
-input_boolean: !include config/inputs/input_booleans.yaml
-input_number: !include config/inputs/input_number.yaml
-sensor: !include_dir_merge_list config/sensors/
-switch: !include_dir_merge_list config/switch/
-binary_sensor: !include_dir_merge_list config/binary_sensors/
-
-alarm_control_panel: !include resources/bwalarm/bwalarm.yaml
-entity_controller: !include config/lights/entitycontroller.yaml
-
+# MQTT
 mqtt:
   discovery: true
   broker: 192.168.1.3
@@ -38,6 +23,52 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 
+
+group: !include groups.yaml
+automation: !include_dir_list config/automations/
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# lights
+light: !include config/lights/lights.yaml
+light shelly: !include config/lights/shelly.yaml
+light sonoff: !include config/lights/sonoff.yaml
+light groups: !include config/lights/groups.yaml
+
+# inputs
+input_boolean: !include config/inputs/input_booleans.yaml
+input_number: !include config/inputs/input_number.yaml
+
+# sensors
+sensor: !include_dir_merge_list config/sensors/
+binary_sensor: !include_dir_merge_list config/binary_sensors/
+
+# switch
+switch: !include_dir_merge_list config/switch/
+switch broadlink:
+  - platform: broadlink
+    mac: '78:0f:77:d9:2b:62'
+    switches:
+      !include_dir_merge_list config/broadlink
+
+# custom
+alarm_control_panel: !include resources/bwalarm/bwalarm.yaml
+entity_controller: !include config/lights/entitycontroller.yaml
+circadian_lighting:
+  min_colortemp: 1000
+  max_colortemp: 10000
+telegram_bot:
+  - platform: broadcast
+    api_key: 1370256438:AAHawlIetOGiXFyK3yYCZ1is5dfZoXNDsf0
+    allowed_chat_ids:
+      - -339288917 # NiemandHass Group
+      - 1431752361 # Eugene
+
+notify:
+  - platform: telegram
+    name: Eugene
+    chat_id: 1431752361
+
 device_tracker:
   - platform: iphonedetect
     consider_home: 60
@@ -48,19 +79,6 @@ device_tracker:
       eugene_iphone_ip: 192.168.1.226
       hailey_iphone_ip: 192.168.1.246
 
-telegram_bot:
-  - platform: broadcast
-    api_key: 1370256438:AAHawlIetOGiXFyK3yYCZ1is5dfZoXNDsf0
-    allowed_chat_ids:
-      - -339288917 # NiemandHass Group
-      - 1431752361 # Eugene
 
-circadian_lighting:
-  min_colortemp: 1000
-  max_colortemp: 10000
 
-switch broadlink:
-  - platform: broadlink
-    mac: '78:0f:77:d9:2b:62'
-    switches:
-      !include_dir_merge_list config/broadlink
+
