@@ -1,4 +1,0 @@
-- platform: tod
-  name: Work Routine
-  after: '05:00'
-  before: '07:00'

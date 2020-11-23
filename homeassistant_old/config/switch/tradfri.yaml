@@ -1,8 +1,0 @@
-- platform: mqtt
-  name: Fish
-  state_topic: "zigbee2mqtt/fish_light"
-  command_topic: "zigbee2mqtt/fish_light/set"
-  value_template: "{{ value_json.state }}"
-  payload_on: "ON"
-  payload_off: "OFF"
-  retain: false

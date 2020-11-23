@@ -1,8 +1,0 @@
-eugene_location:
-  initial: "unknown"
-hailey_location:
-  initial: "unknown"
-push_message:
-  initial: ""
-tts_message:
-  initial: ""

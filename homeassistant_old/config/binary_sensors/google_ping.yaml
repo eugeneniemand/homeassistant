@@ -1,4 +1,0 @@
-- platform: ping
-  host: www.google.com
-  count: 2
-  scan_interval: 30

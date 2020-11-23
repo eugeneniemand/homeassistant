@@ -1,8 +1,0 @@
-restart_hass:
-  alias: Restart Home Assistant
-  sequence:
-    - service: notify.iphones
-      data_template:
-        title: Sonoff Failed. Restarting...
-        message: '{{ trigger.event.data.message }}'
-    - service: shell_command.restart_hass
