@@ -7,3 +7,18 @@ lounge_motion_lights_disabled:
 
 notify_eugene_telegram:
   initial: on
+
+back_door_checked:
+  icon:  mdi:door-closed-lock
+
+front_door_checked:
+  icon:  mdi:door-closed-lock
+
+lounge_door_checked:
+  icon:  mdi:door-closed-lock
+
+dining_door_checked:
+  icon:  mdi:door-closed-lock
+
+garage_back_door_checked:
+  icon:  mdi:door-closed-lock

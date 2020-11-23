@@ -1,4 +1,4 @@
-alias: Door Chime
+alias: Door Lock Checks
 initial_state: true
 trigger:
   - platform: state
@@ -11,5 +11,6 @@ trigger:
     from: 'off'
     to: 'on'
 action:
-  - service: switch.turn_on
-    entity_id: switch.alarm_beep_two
+  - service: input_boolean.turn_off
+    data:
+      entity_id: 'input_boolean.{{ trigger.entity_id.split(".")[1] }}_checked' # Get the second part of the entity id
