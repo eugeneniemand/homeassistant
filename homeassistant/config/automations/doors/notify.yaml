@@ -1,0 +1,24 @@
+alias: Door Notify
+initial_state: true
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.back_door
+      - binary_sensor.front_door
+      - binary_sensor.lounge_door
+      - binary_sensor.dining_door
+      - binary_sensor.garage_back_door
+    from: 'off'
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: input_boolean.notify_eugene_telegram
+    state: 'on'
+  - condition: state
+    entity_id: person.eugene
+    state: not_home
+action:
+- service: notify.eugene
+  data:
+    title: Door Open
+    message: '{{ trigger.from_state.name }}' # Get triggering entity Friendly Name
