@@ -1,0 +1,4 @@
+Christmas:
+  entities:
+    - switch.plug_2
+    - switch.christmas_indoor_sonoff

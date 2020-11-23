@@ -1,0 +1,19 @@
+lounge_lux_limit:
+  min: 0
+  max: 200
+  step: 1
+
+dining_lux_limit:
+  min: 0
+  max: 200
+  step: 1
+
+office_lux_limit:
+  min: 0
+  max: 200
+  step: 1
+
+aaron_lux_limit:
+  min: 0
+  max: 200
+  step: 1

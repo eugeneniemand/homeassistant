@@ -1,0 +1,105 @@
+- platform: template
+  sensors:
+    template_last_motion:
+      friendly_name: 'Last Motion'
+      value_template: >
+        {%- set pirs = [states.binary_sensor.toilet_motion,states.binary_sensor.lounge_motion,states.binary_sensor.dining_motion,states.binary_sensor.kitchen_motion,states.binary_sensor.utility_motion,states.binary_sensor.landing_motion,states.binary_sensor.bathroom_motion,states.binary_sensor.master_motion,states.binary_sensor.jayden_motion,states.binary_sensor.aaron_motion,states.binary_sensor.office_motion,states.binary_sensor.entrance_motion] %}
+        {% for pir in pirs %}
+          {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+            {{ pir.name }}
+          {% endif %}
+        {% endfor %}
+      attribute_templates:
+        last_changed: >-
+          {%- set pirs = [states.binary_sensor.toilet_motion,states.binary_sensor.lounge_motion,states.binary_sensor.dining_motion,states.binary_sensor.kitchen_motion,states.binary_sensor.utility_motion,states.binary_sensor.landing_motion,states.binary_sensor.bathroom_motion,states.binary_sensor.master_motion,states.binary_sensor.jayden_motion,states.binary_sensor.aaron_motion,states.binary_sensor.office_motion,states.binary_sensor.entrance_motion] %}
+          {% for pir in pirs %}
+            {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+              {{ pir.last_changed }}
+            {% endif %}
+          {% endfor %}
+- platform: template
+  sensors:
+    template_last_motion_downstairs:
+      friendly_name: 'Last Motion Downstairs'
+      value_template: >
+        {%- set pirs = [states.binary_sensor.toilet_motion,states.binary_sensor.lounge_motion,states.binary_sensor.dining_motion,states.binary_sensor.kitchen_motion,states.binary_sensor.office_motion,states.binary_sensor.entrance_motion] %}
+        {% for pir in pirs %}
+          {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+            {{ pir.name }}
+          {% endif %}
+        {% endfor %}
+      attribute_templates:
+        last_changed: >-
+          {%- set pirs = [states.binary_sensor.toilet_motion,states.binary_sensor.lounge_motion,states.binary_sensor.dining_motion,states.binary_sensor.kitchen_motion,states.binary_sensor.office_motion,states.binary_sensor.entrance_motion] %}
+          {% for pir in pirs %}
+            {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+              {{ pir.last_changed }}
+            {% endif %}
+          {% endfor %}
+- platform: template
+  sensors:
+    template_last_motion_upstairs:
+      friendly_name: 'Last Motion Upstairs'
+      value_template: >
+        {%- set pirs = [states.binary_sensor.landing_motion,states.binary_sensor.bathroom_motion,states.binary_sensor.master_motion,states.binary_sensor.jayden_motion,states.binary_sensor.aaron_motion] %}
+        {% for pir in pirs %}
+          {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+            {{ pir.name }}
+          {% endif %}
+        {% endfor %}
+      attribute_templates:
+        last_changed: >-
+          {%- set pirs = [states.binary_sensor.landing_motion,states.binary_sensor.bathroom_motion,states.binary_sensor.master_motion,states.binary_sensor.jayden_motion,states.binary_sensor.aaron_motion] %}
+          {% for pir in pirs %}
+            {% if as_timestamp(pir.last_changed) == as_timestamp(pirs | map(attribute='last_changed') | max) %}
+              {{ pir.last_changed }}
+            {% endif %}
+          {% endfor %}
+
+- platform: history_stats
+  name: Average Ping Konnected AddOn Ratio
+  state: 'off'
+  entity_id: binary_sensor.ping_konnected_add_on
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: ratio
+
+- platform: history_stats
+  name: Average Ping Konnected AddOn Count
+  state: 'off'
+  entity_id: binary_sensor.ping_konnected_add_on
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: count
+
+- platform: history_stats
+  name: Average Ping Konnected Main Ratio
+  state: 'off'
+  entity_id: binary_sensor.ping_konnected_main
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: ratio
+
+- platform: history_stats
+  name: Average Ping Konnected Main Count
+  state: 'off'
+  entity_id: binary_sensor.ping_konnected_main
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: count
+
+- platform: history_stats
+  name: Average Ping Konnected Google Ratio
+  state: 'off'
+  entity_id: binary_sensor.ping_google
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: ratio
+
+- platform: history_stats
+  name: Average Ping Konnected Google Count
+  state: 'off'
+  entity_id: binary_sensor.ping_google
+  duration: 00:01:00
+  end: '{{ now() }}'
+  type: count

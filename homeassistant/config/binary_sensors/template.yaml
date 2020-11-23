@@ -1,0 +1,41 @@
+- platform: template
+  sensors:
+    dining_bright:
+      friendly_name: Dining Bright
+      value_template: '{{ states.sensor.dining_lux.state | int >= states.input_number.dining_lux_limit.state | int or states.sensor.dining_lux.state == "unknown"}}'
+      attribute_templates:
+        lux_limit: '{{ states.input_number.dining_lux_limit.state }}'
+        lux: '{{ states.sensor.dining_lux.state }}'
+
+- platform: template
+  sensors:
+    lounge_bright:
+      friendly_name: Lounge Bright
+      value_template: '{{ states.sensor.lounge_lux.state | int >= states.input_number.lounge_lux_limit.state | int or states.sensor.lounge_lux.state == "unknown" }}'
+      attribute_templates:
+        lux_limit: '{{ states.input_number.lounge_lux_limit.state }}'
+        lux: '{{ states.sensor.lounge_lux.state }}'
+
+- platform: template
+  sensors:
+    office_bright:
+      friendly_name: Office Bright
+      value_template: '{{ states.sensor.office_lux.state | int >= states.input_number.office_lux_limit.state | int or states.sensor.office_lux.state == "unknown" }}'
+      attribute_templates:
+        lux_limit: '{{ states.input_number.office_lux_limit.state }}'
+        lux: '{{ states.sensor.office_lux.state }}'
+
+- platform: template
+  sensors:
+    arron_bright:
+      friendly_name: Aaron Bright
+      value_template: '{{ states.sensor.aaron_lux.state | int >= states.input_number.aaron_lux_limit.state | int or states.sensor.aaron_lux.state == "unknown" }}'
+      attribute_templates:
+        lux_limit: '{{ states.input_number.aaron_lux_limit.state }}'
+        lux: '{{ states.sensor.aaron_lux.state }}'
+
+- platform: template
+  sensors:
+    eugene_laptop_in_use:
+      friendly_name: Eugene Laptop In Use
+      value_template: '{{ states.sensor.asglh_wl_19140_system_idle_time.state | int == 0 }}'

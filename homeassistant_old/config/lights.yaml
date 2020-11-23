@@ -1,0 +1,247 @@
+- platform: mqtt
+  name: Entrance
+  state_topic: "shellies/shelly1-2C6D1B/relay/0"
+  command_topic: "shellies/shelly1-2C6D1B/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: Kitchen
+  state_topic: "shellies/shelly1-2C843D/relay/0"
+  command_topic: "shellies/shelly1-2C843D/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: Lounge
+  state_topic: "shellies/shelly1-555077/relay/0"
+  command_topic: "shellies/shelly1-555077/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: Under Counter Lights
+  state_topic: "stat/kitchen_undercounter/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/kitchen_undercounter/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
+- platform: mqtt
+  name: Toilet
+  command_topic: "zigbee2mqtt/toilet_light/set"
+  state_topic: "zigbee2mqtt/toilet_light"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  brightness: true
+  rgb: false
+  schema: json
+- platform: mqtt
+  name: Jayden Bedside
+  state_topic: "stat/jayden_bedside/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/jayden_bedside/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
+- platform: mqtt
+  schema: template
+  name: "Master Accent"
+  command_topic: "shellies/shellyrgbw2-5A396C/color/0/set"
+  state_topic: "shellies/shellyrgbw2-5A396C/color/0/status"
+  availability_topic: "shellies/shellyrgbw2-5A396C/online"
+  payload_available: "true"
+  payload_not_available: "false"
+  effect_list:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  command_on_template: >
+    {"turn": "on"
+    {%- if brightness is defined -%}
+    , "gain": {{brightness | float | multiply(0.3922) | round(0)}}
+    {%- endif -%}
+    {%- if red is defined and green is defined and blue is defined -%}
+    , "red": {{ red }}, "green": {{ green }}, "blue": {{ blue }}
+    {%- endif -%}
+    {%- if white_value is defined -%}
+    , "white": {{ white_value }}
+    {%- endif -%}
+    {%- if effect is defined -%}
+    , "effect": {{ effect }}
+    {%- endif -%}
+    }
+  command_off_template: '{"turn":"off"}'
+  state_template: "{% if value_json.ison %}on{% else %}off{% endif %}"
+  brightness_template: "{{ value_json.gain | float | multiply(2.55) | round(0) }}"
+  red_template: '{{ value_json.red }}'
+  green_template: '{{ value_json.green }}'
+  blue_template: '{{ value_json.blue }}'
+  white_value_template: '{{ value_json.white }}'
+  effect_template: '{{ value_json.effect }}'
+  qos: 2
+- platform: mqtt
+  name: "Dining"
+  schema: json
+  command_topic: "zigbee2mqtt/dining_group/set"
+  state_topic: "zigbee2mqtt/dining_group"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Dining1"
+  schema: json
+  command_topic: "zigbee2mqtt/dining1_light/set"
+  state_topic: "zigbee2mqtt/dining1_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Dining2"
+  schema: json
+  command_topic: "zigbee2mqtt/dining2_light/set"
+  state_topic: "zigbee2mqtt/dining2_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Dining3"
+  schema: json
+  command_topic: "zigbee2mqtt/dining3_light/set"
+  state_topic: "zigbee2mqtt/dining3_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Dining4"
+  schema: json
+  command_topic: "zigbee2mqtt/dining4_light/set"
+  state_topic: "zigbee2mqtt/dining4_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Porch"
+  schema: json
+  command_topic: "zigbee2mqtt/porch_light/set"
+  state_topic: "zigbee2mqtt/porch_light"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Floor"
+  schema: json
+  command_topic: "zigbee2mqtt/floor_light/set"
+  state_topic: "zigbee2mqtt/floor_light"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Landing"
+  schema: json
+  command_topic: "zigbee2mqtt/landing_light/set"
+  state_topic: "zigbee2mqtt/landing_light"
+  brightness: true
+  color_temp: false
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Utility"
+  schema: json
+  command_topic: "zigbee2mqtt/utility_light/set"
+  state_topic: "zigbee2mqtt/utility_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Aaron"
+  schema: json
+  command_topic: "zigbee2mqtt/aaron_light/set"
+  state_topic: "zigbee2mqtt/aaron_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Bathroom"
+  schema: json
+  command_topic: "zigbee2mqtt/bathroom_group/set"
+  state_topic: "zigbee2mqtt/bathroom_group"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Bathroom1"
+  schema: json
+  command_topic: "zigbee2mqtt/bathroom1_light/set"
+  state_topic: "zigbee2mqtt/bathroom1_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Bathroom2"
+  schema: json
+  command_topic: "zigbee2mqtt/bathroom2_light/set"
+  state_topic: "zigbee2mqtt/bathroom2_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Bathroom3"
+  schema: json
+  command_topic: "zigbee2mqtt/bathroom3_light/set"
+  state_topic: "zigbee2mqtt/bathroom3_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Bathroom4"
+  schema: json
+  command_topic: "zigbee2mqtt/bathroom4_light/set"
+  state_topic: "zigbee2mqtt/bathroom4_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Jayden"
+  schema: json
+  command_topic: "zigbee2mqtt/jayden_light/set"
+  state_topic: "zigbee2mqtt/jayden_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Office"
+  schema: json
+  command_topic: "zigbee2mqtt/office_light/set"
+  state_topic: "zigbee2mqtt/office_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false
+- platform: mqtt
+  name: "Master"
+  schema: json
+  command_topic: "zigbee2mqtt/master_light/set"
+  state_topic: "zigbee2mqtt/master_light"
+  brightness: true
+  color_temp: true
+  qos: 2
+  optimistic: false

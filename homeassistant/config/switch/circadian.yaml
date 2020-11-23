@@ -1,14 +1,24 @@
 - platform: circadian_lighting
+  name: Circadian Lounge
+  lights_ct:
+    - light.lounge
+
+- platform: circadian_lighting
+  name: Circadian Dining
   lights_ct:
     - light.dining
-    - light.bathroom
-    - light.jayden
-    - light.aaron
-    - light.master
-    - light.office
-  lights_brightness:
+
+- platform: circadian_lighting
+  name: Circadian Study
+  lights_ct:
+    - light.study
+
+- platform: circadian_lighting
+  name: Circadian Floor
+  lights_ct:
     - light.floor
-    - light.utility
-    - light.landing
-    - light.porch
-    - light.toilet
+
+- platform: circadian_lighting
+  name: Circadian Arron
+  lights_ct:
+    - light.arron

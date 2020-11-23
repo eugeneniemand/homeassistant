@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: Christmas Indoor Sonoff
+  state_topic: "stat/christmas_indoor/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/christmas_indoor/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false

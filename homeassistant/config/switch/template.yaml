@@ -1,0 +1,19 @@
+- platform: template
+  switches:
+    lg_tv:
+      friendly_name: LG TV
+      value_template: '{{ states.sensor.plug_1_energy.state | int > 0 }}'
+      icon_template: >-
+        {% if states.sensor.plug_1_energy.state | int > 0 %}
+          mdi:television-classic
+        {% else %}
+          mdi:television-classic-off
+        {% endif %}
+      turn_on:
+        service: switch.turn_on
+        data:
+          entity_id: switch.lounge_lgtv_power_on
+      turn_off:
+        service: switch.turn_on
+        data:
+          entity_id: switch.lounge_lgtv_power_off

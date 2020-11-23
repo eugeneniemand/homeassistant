@@ -13,16 +13,36 @@ groups:
       - '0x000d6ffffe4c0abb'
       - '0x000d6ffffe4c2e50'
       - '0x000d6ffffe62eaf8'
+      - '0x000d6ffffe62f426'
   '2':
-    friendly_name: bathroom_group
+    friendly_name: study_group
     devices:
       - '0x000d6ffffe4b2b06'
       - '0x000d6ffffe4b5c14'
       - '0x000d6ffffe5d5a23'
+  '3':
+    friendly_name: lounge_group
+    devices:
+      - '0x000d6ffffe03a9c8'
+      - '0x000d6ffffe12ba7a'
+  '4':
+    friendly_name: downstairs_group
+    devices:
+      - '0x000d6ffffe4b2431'
+      - '0x000d6ffffe4c0abb'
+      - '0x000d6ffffe4c2e50'
+      - '0x000d6ffffe62eaf8'
       - '0x000d6ffffe62f426'
+      - '0x000d6ffffe4b2b06'
+      - '0x000d6ffffe4b5c14'
+      - '0x000d6ffffe5d5a23'
+      - '0x000d6ffffe03a9c8'
+      - '0x000d6ffffe12ba7a'
+      - '0x000d6ffffe016c9f'
 advanced:
   channel: 15
   log_level: info
+  last_seen: ISO_8601_local
 devices:
   '0x00158d000313ce7d':
     friendly_name: lounge_motion
@@ -49,10 +69,10 @@ devices:
     friendly_name: front_door
     retain: false
   '0x00158d0002ecf038':
-    friendly_name: patio_door
+    friendly_name: dining_door
     retain: false
   '0x00158d0003120b9e':
-    friendly_name: back_door
+    friendly_name: lounge_door
     retain: false
   '0x00158d0002a21b2e':
     friendly_name: fish_vibration
@@ -71,6 +91,9 @@ devices:
     retain: false
   '0x000d6ffffe4c2e50':
     friendly_name: dining4_light
+    retain: false
+  '0x000d6ffffe62f426':
+    friendly_name: dining5_light
     retain: false
   '0x000b3cfffef29ff9':
     friendly_name: landing_light
@@ -91,25 +114,22 @@ devices:
     friendly_name: aaron_light
     retain: false
   '0x000d6ffffe5d5a23':
-    friendly_name: bathroom1_light
+    friendly_name: study1_light
     retain: false
   '0x000d6ffffe4b5c14':
-    friendly_name: bathroom2_light
+    friendly_name: study2_light
     retain: false
   '0x000d6ffffe4b2b06':
-    friendly_name: bathroom3_light
-    retain: false
-  '0x000d6ffffe62f426':
-    friendly_name: bathroom4_light
+    friendly_name: study3_light
     retain: false
   '0x000d6ffffe03bcad':
     friendly_name: jayden_light
     retain: false
   '0x000d6ffffe12ba7a':
-    friendly_name: office_light
+    friendly_name: lounge_front_light
     retain: false
   '0x000d6ffffe03a9c8':
-    friendly_name: master_light
+    friendly_name: lounge_back_light
     retain: false
   '0x000d6ffffebcc820':
     friendly_name: fish_light
@@ -142,5 +162,10 @@ devices:
     friendly_name: toilet_window
     retain: false
   '0x00158d0004142fef':
-    friendly_name: 'entrance_motion'
+    friendly_name: entrance_motion
+    retain: false
+  '0x30eb5affff7d88cc':
+    friendly_name: '0x30eb5affff7d88cc'
+  '0x00158d000321b0e6':
+    friendly_name: garage_back_door
     retain: false

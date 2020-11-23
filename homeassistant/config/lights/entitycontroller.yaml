@@ -1,0 +1,62 @@
+office_light:
+  sensor:
+    - binary_sensor.office_motion
+    - binary_sensor.study
+    - binary_sensor.eugene_laptop_in_use
+  entity: light.study
+  delay: 300
+  block_timeout: 1800
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.office_bright
+
+lounge_front_light:
+  sensor:
+    - binary_sensor.lounge_motion
+    - binary_sensor.haileys_macbook_air_active
+  entity: light.lounge_front
+  delay: 600
+  block_timeout: 1800
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.lounge_bright
+    - input_boolean.lounge_motion_lights_disabled
+
+lounge_back_light:
+  sensor:
+    - binary_sensor.lounge_motion
+  entity: light.lounge_back
+  delay: 600
+  block_timeout: 1800
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.lounge_bright
+    - input_boolean.lounge_motion_lights_disabled
+
+dining_light:
+  sensor: binary_sensor.dining_motion
+  entity: light.dining
+  delay: 600
+  block_timeout: 1800
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.dining_bright
+
+arron_light:
+  sensor: binary_sensor.arron_motion
+  entity: light.arron
+  delay: 300
+  block_timeout: 600
+  state_attributes_ignore:
+    - brightness
+    - color_temp
+  overrides:
+    - binary_sensor.arron_bright

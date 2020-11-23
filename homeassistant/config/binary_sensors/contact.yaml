@@ -1,0 +1,43 @@
+# Contact
+- platform: "mqtt"
+  name: Garage Back Door
+  state_topic: "zigbee2mqtt/garage_back_door"
+  json_attributes_topic: "zigbee2mqtt/garage_back_door"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: door
+- platform: "mqtt"
+  name: Dining Door
+  state_topic: "zigbee2mqtt/dining_door"
+  json_attributes_topic: "zigbee2mqtt/dining_door"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: door
+- platform: "mqtt"
+  name: Lounge Door
+  state_topic: "zigbee2mqtt/lounge_door"
+  json_attributes_topic: "zigbee2mqtt/lounge_door"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: door
+- platform: "mqtt"
+  name: Toilet Window
+  state_topic: "zigbee2mqtt/toilet_window"
+  json_attributes_topic: "zigbee2mqtt/toilet_window"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: window
+- platform: "mqtt"
+  name: Lounge Left Window
+  state_topic: "zigbee2mqtt/lounge_left_window"
+  json_attributes_topic: "zigbee2mqtt/lounge_left_window"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: window
+- platform: "mqtt"
+  name: Lounge Right Window
+  state_topic: "zigbee2mqtt/lounge_right_window"
+  json_attributes_topic: "zigbee2mqtt/lounge_right_window"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: window
+- platform: "mqtt"
+  name: Kitchen Window
+  state_topic: "zigbee2mqtt/kitchen_window"
+  json_attributes_topic: "zigbee2mqtt/kitchen_window"
+  value_template: "{{ 'OFF' if value_json.contact else 'ON' }}"
+  device_class: window

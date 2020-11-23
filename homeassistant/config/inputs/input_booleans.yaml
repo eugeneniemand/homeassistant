@@ -1,21 +1,9 @@
-work_tomorrow:
-  name: Work Tomorrow
-  initial: on
-  icon: mdi:office-building
-
-motion_enabled:
-  name: Motion Enabled
-  initial: on
-  icon: mdi:motion-sensor
-
-is_bedtime:
-  name: Is Bedtime
-  icon: mdi:bed-empty
-
-kids_sleeping:
-  name: Kids Sleeping
-  icon: mdi:sleep
-
-eugene_laptop_idle:
+alaram_panic:
   initial: off
-  icon: mdi:laptop-off
+  icon: mdi:alarm-bell
+
+lounge_motion_lights_disabled:
+  icon: mdi:motion-sensor-off
+
+notify_eugene_telegram:
+  initial: on

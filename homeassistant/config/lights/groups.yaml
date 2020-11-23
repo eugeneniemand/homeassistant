@@ -1,0 +1,6 @@
+- platform: group
+  name: Outside Front
+  entities:
+    - light.outside_drive
+    - light.outside_garage
+

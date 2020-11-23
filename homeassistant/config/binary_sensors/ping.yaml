@@ -1,0 +1,15 @@
+- platform: ping
+  host: 192.168.1.130
+  name: Ping Konnected Main
+  count: 1
+  scan_interval: 5
+- platform: ping
+  host: 192.168.1.155
+  name: Ping Konnected Add On
+  count: 1
+  scan_interval: 5
+- platform: ping
+  host: www.google.com
+  name: Ping Google
+  count: 5
+  scan_interval: 30

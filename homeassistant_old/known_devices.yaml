@@ -1,0 +1,15 @@
+hailey_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: hailey ping
+  picture:
+  track: true
+
+eugene_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: eugene ping
+  picture:
+  track: true

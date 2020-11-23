@@ -53,7 +53,7 @@
   unit_of_measurement: lux
   device_class: illuminance
 - platform: mqtt
-  name: Jayden Lux
+  name: Boys Lux
   state_topic: "zigbee2mqtt/jayden_motion"
   value_template: "{{ value_json.illuminance }}"
   unit_of_measurement: lux

@@ -1,0 +1,14 @@
+- platform: circadian_lighting
+  lights_ct:
+    - light.dining
+    - light.bathroom
+    - light.jayden
+    - light.aaron
+    - light.master
+    - light.office
+  lights_brightness:
+    - light.floor
+    - light.utility
+    - light.landing
+    - light.porch
+    - light.toilet

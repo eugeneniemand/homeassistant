@@ -1,0 +1,190 @@
+homeassistant:
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  # Customization file
+  customize: !include customize.yaml
+  latitude: 51.609286097686514
+  longitude: 0.5274361874258462
+  elevation: 15
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+        - 172.17.0.0/24
+
+ios:
+python_script:
+
+system_health:
+system_log:
+  max_entries: 50
+  fire_event: true
+
+
+zone:
+  - name: Home
+    latitude: 51.609286097686514
+    longitude: 0.5274361874258462
+    elevation: 15
+    radius: 40
+  - name: Silva Island
+    latitude: 51.601978
+    longitude: 0.535576
+    radius: 30
+  - name: Eugene Office
+    latitude: 51.533428
+    longitude: -0.139532
+    radius: 50
+  - name: Liverpool Street Station
+    latitude: 51.518740
+    longitude: -0.081400
+  - name: Wickford Station
+    latitude: 51.615004
+    longitude: 0.519473
+
+logger:
+  default: warn
+
+recorder:
+  purge_keep_days: 3
+# Show links to resources in log and frontend
+# introduction:
+# Enables the frontend
+frontend:
+# Enables configuration UI
+config:
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+# Discover some devices automatically
+# discovery:
+# Allows you to issue voice commands from the frontend in enabled browsers
+# conversation:
+# Enables a map showing the location of tracked devices
+map:
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google_translate
+    service_name: google_say
+
+cloud:
+mobile_app:
+# Cloud
+automation: !include_dir_list config/automations/
+binary_sensor: !include_dir_merge_list config/binary_sensors/
+cover: !include config/covers.yaml
+group: !include config/groups.yaml
+history: !include config/history.yaml
+input_boolean: !include config/inputs/input_booleans.yaml
+input_datetime: !include config/inputs/input_datetimes.yaml
+input_number: !include config/inputs/input_numbers.yaml
+input_text: !include config/inputs/input_text.yaml
+light: !include config/lights.yaml
+logbook: !include config/logbook.yaml
+script: !include_dir_merge_named config/scripts/
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list config/sensors/
+switch: !include_dir_merge_list config/switch/
+timer: !include config/timers.yaml
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    units: uk2
+    latitude: 51.609286097686514
+    longitude: 0.5274361874258462
+
+apple_tv:
+  - host: 192.168.1.63
+    login_id: 00000000-1125-e790-211b-ebdb550145c2
+    name: Bedroom ATV
+
+apple_tv_mrp:
+  - host: 192.168.1.247
+    port: 49152
+    name: Lounge Apple TV
+
+mqtt:
+  discovery: true
+  broker: 192.168.1.3
+  port: 1883
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+device_tracker:
+  - platform: iphonedetect
+    consider_home: 60
+    new_device_defaults:
+      track_new_devices: true
+      hide_if_away: false
+    hosts:
+      eugene_ping: 192.168.1.226
+      hailey_ping: 192.168.1.246
+
+alarm_control_panel:
+  - platform: yale_smart_alarm
+    username: !secret yale_smart_alarm_username
+    password: !secret yale_smart_alarm_password
+
+media_player:
+  - platform: yamaha
+    host: 192.168.1.229
+
+climate:
+  - platform: melcloud
+    email: !secret melcloud_user
+    password: !secret melcloud_password
+
+alexa_media:
+  accounts:
+    email: !secret alexa_email
+    password: !secret alexa_password
+    url: amazon.co.uk
+
+notify:
+  - name: iphones
+    platform: group
+    services:
+      - service: mobile_app_eugenes_iphone
+      - service: mobile_app_hailey_s_iphone
+  - platform: alexa_media
+    name: alexa_media
+
+lovelace:
+  mode: yaml
+
+fastdotcom:
+  scan_interval:
+      minutes: 30
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+    seconds: 45
+  server_id: 11123
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+shell_command:
+  restart_hass: 'curl http://127.0.0.1:8126/container/home-assistant/restart'
+  restart_zigbee2mqtt: 'curl http://127.0.0.1:8126/container/zigbee2mqtt/restart'
+
+circadian_lighting:
+

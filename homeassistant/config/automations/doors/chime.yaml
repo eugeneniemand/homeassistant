@@ -1,0 +1,25 @@
+alias: Door Chime
+initial_state: true
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.back_door
+      - binary_sensor.front_door
+      - binary_sensor.lounge_door
+      - binary_sensor.dining_door
+      - binary_sensor.garage_back_door
+    from: 'off'
+    to: 'on'
+action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.notify_eugene_telegram
+        state: 'on'
+      sequence:
+      - service: notify.eugene
+        data:
+          title: Door Open
+          message: '{{ trigger.entity_id }}'
+  - service: switch.turn_on
+    entity_id: switch.alarm_beep_two

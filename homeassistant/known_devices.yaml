@@ -1,15 +1,21 @@
-hailey_ping:
-  hide_if_away: false
-  icon:
+
+host_two:
+  name: host_two
   mac:
-  name: hailey ping
+  icon:
   picture:
   track: true
 
-eugene_ping:
-  hide_if_away: false
-  icon:
+hailey_iphone_ip:
+  name: hailey_iphone_ip
   mac:
-  name: eugene ping
+  icon:
+  picture:
+  track: true
+
+eugene_iphone_ip:
+  name: eugene_iphone_ip
+  mac:
+  icon:
   picture:
   track: true
